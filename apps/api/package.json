@@ -1,0 +1,20 @@
+{
+  "name": "@project-workspace/api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "start": "bun src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5",
+    "vitest": "^4.1.11"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "fastify": "^5.12.1"
+  }
+}

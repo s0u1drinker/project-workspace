@@ -1,0 +1,54 @@
+:root {
+  /* Цвета */
+  --color-text: #1e293b;
+  --color-text-secondary: #64748b;
+
+  --color-white: #fff;
+  --color-white-50: color-mix(in srgb, var(--color-white) 50%, transparent);
+  --color-gray: #a9a9a9;
+  --color-black: #000;
+
+  --color-primary: #3b82f6;
+  --color-secondary: #7434b4;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #dc2626;
+  
+  --color-svelte: #FF3E00;
+  
+  /* Шрифты */
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-size: 1rem;
+
+  /* Радиусы */
+  --radius: .5rem;
+  --radius-full: 9999px;
+  
+  /* Тени */
+  --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+
+  /* Фильтры */
+  --filter-blur: blur(4px);
+
+  /* Отступы */
+  --indent: 1rem;
+  --indent-double: calc(var(--indent) * 2);/* 2x */
+  --indent-half: calc(var(--indent) / 2);/* 0.5x */
+  --indent-quarter: calc(var(--indent) / 4);/* 0.25x */
+  --indent-and-half: calc(var(--indent) + var(--indent-half)); /* 1.5x */
+  --indent-three-quarters: calc(var(--indent-half) + var(--indent-quarter));/* 0.75x */
+  
+  /* Media */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* Переходы */
+  --transition-fast: .15s ease;
+  --transition-base: .3s ease;
+  --transition-slow: .5s ease;
+}

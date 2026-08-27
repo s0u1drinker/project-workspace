@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scrollbar-gutter: auto;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+#app {
+  height: 100dvh;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a {
+  color: var(--color-primary);
+
+  @mixin focus;
+
+  &:visited {
+    color: var(--color-primary);
+  }
+
+  &:focus-visible {
+    text-decoration: none;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+textarea {
+  resize: none;
+  padding: var(--indent-half);
+}
+
+input {
+  padding: var(--indent-half);
+  border: 0 none;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--color-primary);
+  width: 1rem;
+  height: 1rem;
+}
+
+select {
+  padding: var(--indent-half);
+}
+
+input,
+select,
+textarea {
+  @mixin focus;
+}
+
+.input {
+  border: var(--border);
+  border-radius: var(--radius);
+  width: 100%;
+}

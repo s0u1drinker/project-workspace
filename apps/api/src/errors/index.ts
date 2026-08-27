@@ -1,0 +1,1 @@
+export { registerErrorHandler } from "./handler";

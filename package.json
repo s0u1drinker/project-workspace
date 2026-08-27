@@ -1,0 +1,18 @@
+{
+  "name": "project-workspace",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+    "scripts": {
+    "api:dev": "bun --cwd apps/api dev",
+    "api:test": "bun --cwd apps/api test",
+    "api:typecheck": "bun --cwd apps/api typecheck"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5"
+  }
+}
