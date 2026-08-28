@@ -11,6 +11,9 @@
   --color-danger: #dc2626;
   
   --color-svelte: #FF3E00;
+
+  --color-gradient-1: rgba(145, 186, 255, 0.25);
+  --color-gradient-2: rgba(194, 166, 252, 0.25);
   
   --color-text: #1e293b;
   --color-text-secondary: #64748b;
