@@ -1,7 +1,22 @@
 import type { SVGAttributes } from 'svelte/elements';
-import type { TIconName } from '$lib/types';
+import type { IconifyIconProps } from '@iconify/svelte';
+import type { TIconNameLocal, TIconNameIconify, TAccessibilityProps } from '$lib/types';
 
-export interface IIcon extends SVGAttributes<SVGSVGElement> {
-  iconName: TIconName;
+interface IIconBase {
+  class?: string;
   color?: string;
+  size?: string | number;
 }
+
+export type TIconLocal = IIconBase &
+  SVGAttributes<SVGSVGElement> & {
+    icon: TIconNameLocal;
+  };
+
+export type TIconIconify = IIconBase &
+  IconifyIconProps &
+  TAccessibilityProps & {
+    icon: TIconNameIconify;
+  };
+
+export type TIcon = TIconLocal | TIconIconify;

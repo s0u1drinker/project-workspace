@@ -1,4 +1,6 @@
-export type TIconName = `${string}:${string}`;
+export type TIconNameLocal = `local:${string}`;
+export type TIconNameIconify = `${string}:${string}`;
+export type TIconName = TIconNameLocal | TIconNameIconify;
 
 export type TIconData = { viewBox: string; innerHtml: string } | null;
 

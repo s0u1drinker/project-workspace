@@ -1,11 +1,12 @@
 import {
-  LOCAL_ICON_PREFIX,
+  ICON_LOCAL_PREFIX,
   ICON_DELIMITER,
   ICON_COMPONENT_NAME,
   ICON_ERRORS
 } from '$lib/constants';
 import { showWarning } from './app';
 import type { TIconName, TIconData, TIconRegistry, TSplittedIconName } from '$lib/types';
+import type { TIcon, TIconLocal } from '$lib/components/ui/Icon';
 
 const icons: TIconRegistry = {};
 
@@ -14,8 +15,8 @@ const icons: TIconRegistry = {};
  * @param iconName Имя иконки.
  * @returns Результат проверки.
  */
-export function isIconLocal(iconName: TIconName): boolean {
-  return splittedIconName(iconName).prefix === LOCAL_ICON_PREFIX;
+export function isIconLocal(icon: TIcon): icon is TIconLocal {
+  return splittedIconName(icon.icon).prefix === ICON_LOCAL_PREFIX;
 }
 
 /**
