@@ -29,6 +29,9 @@
   --shadow-sm: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
   --shadow-md: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
 
+  /* Обводка */
+  --border: 1px solid;
+
   /* Фильтры */
   --filter-blur: blur(4px);
 
