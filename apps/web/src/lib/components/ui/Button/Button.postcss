@@ -1,7 +1,7 @@
 .button {
   --button-gap: var(--indent-quarter);
   --button-padding: var(--indent-half) var(--indent);
-  --button-border: var(--border) transparent;
+  --button-border: 0 none;
   --button-border-radius: var(--radius);
   --button-bg-color: var(--color-primary);
   --button-txt-color: var(--color-white);
@@ -58,7 +58,31 @@
     --button-bg-color: var(--color-success);
   }
 
+  &_warning {
+    --button-bg-color: var(--color-warning);
+  }
+
   &_gray {
     --button-bg-color: var(--color-gray);
+  }
+
+  &_outline {
+    border: var(--border-thick) var(--button-bg-color);
+    background-color: transparent;
+    color: var(--button-bg-color);
+
+    @mixin hover {
+      background-color: var(--button-bg-color);
+      color: var(--color-white);
+    }
+  }
+
+  &_plain {
+    color: var(--button-bg-color);
+    background-color: var(--color-bg-body);
+
+    @mixin hover {
+      background-color: color-mix(in oklab, var(--button-bg-color) 15%, white);
+    }
   }
 }

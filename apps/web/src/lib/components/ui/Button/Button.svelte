@@ -3,6 +3,7 @@
   import type { IButton } from "./Button.types";
 
   const {
+    children,
     type = "button",
     color = "primary",
     variant = "default",
@@ -26,24 +27,28 @@
   disabled={props.disabled}
   {...props}
 >
-  {#if iconLeft}
-    <Icon
-      icon={iconLeft}
-      color={iconColor}
-      aria-hidden="true"
-    />
-  {/if}
-  
-  <span>
-    { text }
-  </span>
-
-  {#if iconRight}
-    <Icon
-      icon={iconRight}
-      color={iconColor}
-      aria-hidden="true"
-    />
+  {#if children}
+    {@render children()}
+  {:else}
+    {#if iconLeft}
+      <Icon
+        icon={iconLeft}
+        color={iconColor}
+        aria-hidden="true"
+      />
+    {/if}
+    {#if text}
+      <span>
+        { text }
+      </span>
+    {/if}
+    {#if iconRight}
+      <Icon
+        icon={iconRight}
+        color={iconColor}
+        aria-hidden="true"
+      />
+    {/if}
   {/if}
 </button>
 
