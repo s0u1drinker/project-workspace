@@ -1,2 +1,2 @@
-export { default } from './Input.svelte';
+export { default } from './InputText.svelte';
 export type * from './Input.types';

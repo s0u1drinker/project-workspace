@@ -1,12 +1,12 @@
 <script lang="ts">
   import { INPUT_DEFAULT_PLACEHOLDER } from "$lib/constants";
-  import type { IInputText } from "./Input.types";
+  import type { IBaseInput } from "./Input.types";
 
   let {
     value = $bindable(),
     placeholder = INPUT_DEFAULT_PLACEHOLDER,
     ...props
-  }: IInputText = $props();
+  }: IBaseInput = $props();
 </script>
 
 <input

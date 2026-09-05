@@ -9,9 +9,8 @@ export type TInputNameMap = {
 };
 
 export interface IBaseInput extends TAccessibilityProps {
-  type: InputType;
   value: string;
   placeholder?: string;
+  id?: string;
+  name?: string;
 }
-
-export type IInputText = Omit<IBaseInput, 'type'>;
