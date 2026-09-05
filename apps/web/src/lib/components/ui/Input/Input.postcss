@@ -1,3 +1,14 @@
 .input {
   border: var(--border) var(--color-gray);
+  border-radius: var(--radius);
+  width: 100%;
+  transition: border-color var(--transition-base);
+
+  @mixin hover {
+    border-color: var(--color-text-secondary);
+  }
+
+  &:focus {
+    border-color: var(--color-primary);
+  }
 }
