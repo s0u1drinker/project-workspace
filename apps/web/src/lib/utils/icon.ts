@@ -4,7 +4,7 @@ import {
   ICON_COMPONENT_NAME,
   ICON_ERRORS
 } from '$lib/constants';
-import { showWarning } from './app';
+import { showComponentWarning } from './app';
 import type { TIconName, TIconData, TIconRegistry, TSplittedIconName } from '$lib/types';
 import type { TIcon, TIconLocal } from '$lib/components/ui/Icon';
 
@@ -72,7 +72,7 @@ export function getIconData(iconName: TIconName): TIconData | null {
  * @param text Текст предупреждения.
  */
 function showIconWarning(text: string) {
-  showWarning(ICON_COMPONENT_NAME, text);
+  showComponentWarning(ICON_COMPONENT_NAME, text);
 }
 
 /**
