@@ -1,0 +1,46 @@
+import { showComponentWarning } from './app';
+import {
+  ICON_COMPONENT_NAME,
+  ICON_ERRORS,
+  BUTTON_COMPONENT_NAME,
+  NONAME,
+  NO_MESSAGE_TEXT
+} from '$lib/constants';
+import type { MockInstance } from 'vitest';
+
+describe('Функция showComponentWarning:', () => {
+  let warningSpy: MockInstance;
+
+  beforeEach(() => {
+    warningSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+  });
+
+  afterEach(() => {
+    warningSpy.mockRestore();
+  });
+
+  it('- выводит в консоль предупреждение с именем компонента и текстом', () => {
+    showComponentWarning(ICON_COMPONENT_NAME, ICON_ERRORS.wrongName);
+
+    expect(warningSpy).toHaveBeenCalledWith(`[${ICON_COMPONENT_NAME}]: ${ICON_ERRORS.wrongName}.`);
+  });
+
+  it(`- если не передано имя компонента, то выводит "${NONAME}"`, () => {
+    showComponentWarning('', ICON_ERRORS.wrongPrefix);
+
+    expect(warningSpy).toHaveBeenCalledWith(`[${NONAME}]: ${ICON_ERRORS.wrongPrefix}.`);
+  });
+
+  it(`- если не передан текст предупреждения, то выводит "${NO_MESSAGE_TEXT}"`, () => {
+    showComponentWarning(BUTTON_COMPONENT_NAME, '');
+
+    expect(warningSpy).toHaveBeenCalledWith(`[${BUTTON_COMPONENT_NAME}]: ${NO_MESSAGE_TEXT}.`);
+  });
+
+  it('- если все параметры функции являются falsy-значениями, то выводит значения по умолчанию', () => {
+    // @ts-expect-error Имитация falsy-значений при вызове функции.
+    showComponentWarning(null, undefined);
+
+    expect(warningSpy).toHaveBeenCalledWith(`[${NONAME}]: ${NO_MESSAGE_TEXT}.`);
+  });
+});
