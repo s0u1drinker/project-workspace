@@ -9,9 +9,7 @@
   }
 
   &:focus-visible {
-    box-shadow:
-      0 0 0 2px var(--color-bg-body),
-      0 0 0 4px $color;
+    @mixin focus-shadow $color;
   }
 }
 
@@ -27,4 +25,10 @@
       @mixin-content;
     }
   }
+}
+
+@define-mixin focus-shadow $color: var(--color-primary) {
+  box-shadow:
+    0 0 0 2px var(--color-bg-body),
+    0 0 0 4px $color;
 }
