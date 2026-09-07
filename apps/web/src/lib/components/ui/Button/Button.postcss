@@ -43,7 +43,20 @@
   }
 
   &_rounded {
-    border-radius: var(--radius-full);
+    --button-border-radius: var(--radius-full);
+  }
+
+  &_circle {
+    --button-border-radius: var(--radius-full);
+    --button-padding: var(--indent-half);
+  }
+
+  &_small {
+    --button-padding: var(--indent-quarter);
+  }
+
+  &_large {
+    --button-padding: var(--indent-three-quarters) var(--indent-and-half);
   }
 
   &_secondary {

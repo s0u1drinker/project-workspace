@@ -9,22 +9,29 @@
     variant = "default",
     rounded,
     elevated,
+    circle,
     iconLeft,
     iconRight,
     iconColor,
     text,
+    size,
     ...props
   }: IButton = $props();
   const buttonColor = $derived(color !== 'primary' ? `button_${color}` : null);
   const buttonVariant = $derived(variant !== 'default' ? `button_${variant}` : null);
   const buttonRounded = $derived(rounded && 'button_rounded');
   const buttonElevated = $derived(elevated && 'button_elevated');
+  const buttonSize = $derived(size && `button_${size}`);
+  const buttonCircle = $derived(circle && 'button_circle');
+  const className = $derived(["button", buttonColor, buttonVariant, buttonRounded, buttonElevated, buttonSize, buttonCircle, props.className]);
+  const handleCLick = () => props?.onClick && props.onClick();
 </script>
 
 <button
-  class={["button", buttonColor, buttonVariant, buttonRounded, buttonElevated]}
+  class={className}
   type={type}
   disabled={props.disabled}
+  onclick={handleCLick}
   {...props}
 >
   {#if children}
