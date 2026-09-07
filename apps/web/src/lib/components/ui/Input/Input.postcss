@@ -1,14 +1,38 @@
 .input {
-  border: var(--border) var(--color-gray);
+  --input-border-color: var(--color-gray);
+  --input-padding: var(--indent-three-quarters);
+
+  border: var(--border) var(--input-border-color);
   border-radius: var(--radius);
-  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
   transition: border-color var(--transition-base);
 
   @mixin hover {
-    border-color: var(--color-text-secondary);
+    --input-border-color: var(--color-primary);
   }
 
-  &:focus {
-    border-color: var(--color-primary);
+  &:focus-within {
+    --input-border-color: var(--color-primary);
+
+    @mixin focus-shadow;
+  }
+
+  :global(input) {
+    flex-grow: 1;
+    padding: var(--input-padding);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &_icon {
+    padding-left: var(--input-padding);
+  }
+
+  &_password {
+    padding-right: var(--input-padding);
   }
 }

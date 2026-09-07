@@ -1,4 +1,4 @@
-import type { TInputTypeMap, TInputNameMap } from '$lib/components/ui/Input';
+import type { TInputTypeMap, TInputNameMap, TInputIconMap } from '$lib/components/ui/Input';
 
 /** Список компонентов Input. */
 export const INPUT_COMPONENT_NAMES = {
@@ -19,3 +19,9 @@ export const INPUT_TYPES = {
 } as const satisfies TInputTypeMap;
 
 export const INPUT_DEFAULT_PLACEHOLDER = 'Введите значение';
+export const INPUT_PASSWORD_PLACEHOLDER = 'Введите пароль';
+
+export const INPUT_ICON_MAP = {
+  eyeOpen: 'local:eye-open',
+  eyeSlashed: 'local:eye-slashed'
+} as const satisfies TInputIconMap;

@@ -1,21 +1,24 @@
 <script lang="ts">
   import { INPUT_DEFAULT_PLACEHOLDER } from "$lib/constants";
-  import type { IBaseInput } from "./Input.types";
+  import InputWrapper from "./InputWrapper.svelte";
+  import type { IInputText } from "./Input.types";
 
   let {
     value = $bindable(),
     placeholder = INPUT_DEFAULT_PLACEHOLDER,
+    icon,
     ...props
-  }: IBaseInput = $props();
+  }: IInputText = $props();
 </script>
 
-<input
-  class="input"
-  type="text"
-  {placeholder}
-  bind:value={value}
-  {...props}
-/>
+<InputWrapper {icon}>
+  <input
+    type="text"
+    {placeholder}
+    bind:value={value}
+    {...props}
+  />
+</InputWrapper>
 
 <style lang="postcss">
   @import './Input.postcss';
