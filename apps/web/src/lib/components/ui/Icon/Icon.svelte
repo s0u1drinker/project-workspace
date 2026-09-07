@@ -20,6 +20,7 @@
         {...props}
         width={iconWidth}
         height={iconHeight}
+        aria-hidden="true"
       >
         <!-- eslint-disable-next-line svelte/no-at-html-tags -->
         {@html iconData.innerHtml}
@@ -30,6 +31,7 @@
       {...props}
       width={iconWidth}
       height={iconHeight}
+      aria-hidden="true"
     />
   {/if}
 {/if}
