@@ -13,11 +13,14 @@ export type TInputNameMap = {
 export type TInputIconMap = Record<string, TIconName>;
 
 interface IInputBase extends TAccessibilityProps {
-  value: string;
-  placeholder?: string;
   id?: string;
   name?: string;
   disabled?: boolean;
+}
+
+interface IInputForText {
+  value: string;
+  placeholder?: string;
   readonly?: boolean;
 }
 
@@ -30,11 +33,17 @@ export interface IInputWrapper extends IInputWithIcon {
   className?: string;
 }
 
-export interface IInputText extends IInputBase, IInputWithIcon {
+export interface IInputText extends IInputBase, IInputForText, IInputWithIcon {
   maxLength?: number;
   minLength?: number;
 }
 
-export interface IInputPassword extends IInputBase, IInputWithIcon {
+export interface IInputPassword extends IInputBase, IInputForText, IInputWithIcon {
   autocomplete?: HTMLInputAttributes['autocomplete'];
+}
+
+export interface IInputCheckbox extends IInputBase {
+  checked: boolean;
+  label?: string;
+  children?: Snippet;
 }
