@@ -12,8 +12,8 @@
   
   --color-svelte: #FF3E00;
 
-  --color-gradient-1: color-mix(in oklab, var(--color-primary) 50%, transparent);
-  --color-gradient-2: color-mix(in oklab, var(--color-secondary) 50%, transparent);
+  --color-gradient-1: color-mix(in oklab, var(--color-primary) 30%, transparent);
+  --color-gradient-2: color-mix(in oklab, var(--color-secondary) 30%, transparent);
   
   --color-text: #1e293b;
   --color-text-secondary: #64748b;
