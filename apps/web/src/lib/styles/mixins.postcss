@@ -32,3 +32,9 @@
     0 0 0 2px var(--color-bg-body),
     0 0 0 4px $color;
 }
+
+@define-mixin glass {
+  background: var(--glass-bg);
+  border-color: var(--glass-border-color);
+  backdrop-filter: var(--glass-filter);
+}

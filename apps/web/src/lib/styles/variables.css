@@ -36,9 +36,6 @@
   --border: 1px solid;
   --border-thick: 2px solid;
 
-  /* Фильтры */
-  --filter-blur: blur(4px);
-
   /* Отступы */
   --indent: 1rem;
   --indent-double: calc(var(--indent) * 2);/* 2x */
@@ -58,4 +55,9 @@
   --transition-fast: .15s ease;
   --transition-base: .3s ease;
   --transition-slow: .5s ease;
+
+  /* Glass */
+  --glass-bg: rgba(255, 255, 255, .4);
+  --glass-border-color: rgba(255, 255, 255, .5);
+  --glass-filter: blur(12px);
 }
