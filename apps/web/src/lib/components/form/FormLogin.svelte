@@ -28,21 +28,11 @@
 
   <button class="button button_primary">Войти</button>
 
-  <div class="login-form__divider">
-    <span>или</span>
-  </div>
-
-  <button
-    class="button button_secondary"
-    type="button"
-  >
-    А можно просто посмотреть?
-  </button>
-
   <div class="login-form__links">
     <p>Ещё нет аккаунта?
       <a href={resolve('/signup')}>Зарегистрироваться</a>
     </p>
+    <a href={resolve('/')}>А можно просто посмотреть?</a>
   </div>
 </form>
 
@@ -58,28 +48,6 @@
       margin: 0;
       color: var(--color-text);
       font-size: 2rem;
-    }
-
-    &__divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      span {
-        padding-inline: var(--indent-half);
-        background-color: var(--color-white);
-        border-radius: var(--radius);
-        z-index: 1;
-      }
-
-      &::before {
-        content: "";
-        height: 1px;
-        background-color: var(--color-white);
-        left: 0;
-        right: 0;
-        position: absolute;
-      }
     }
 
     &__links {
@@ -167,16 +135,6 @@
 
       &:hover {
         background: hsl(from var(--color-primary) h s calc(l - 10));
-      }
-    }
-
-    &_secondary {
-      border: var(--border) rgba(255,255,255,.5);
-      background: transparent;
-      color: var(--color-text);
-
-      &:hover {
-        background: rgba(255,255,255,.25);
       }
     }
   }
