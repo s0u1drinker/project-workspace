@@ -32,8 +32,14 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-base);
 
   @mixin focus;
+
+  @mixin hover {
+    text-decoration: underline;
+  }
 
   &:visited {
     color: var(--color-primary);
