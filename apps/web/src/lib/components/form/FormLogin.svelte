@@ -1,11 +1,10 @@
 <script lang="ts">
   import { resolve } from "$app/paths";
   import { Form } from "../common/Form";
+  import { ErrorText } from "../ui/ErrorText/";
   import { APP_NAME } from "$lib/constants";
 
-  let mes = $state('');
-
-  const click = () => { mes = '123'; }
+  let errorText = $state('');
 </script>
 
 <Form className="form_login">
@@ -37,11 +36,11 @@
   {/snippet}
 
   {#snippet message()}
-    <p>{mes}</p>
+    <ErrorText text={errorText} />
   {/snippet}
 
   {#snippet buttons()}
-    <button class="button button_primary" onclick={click}>Войти</button>
+    <button class="button button_primary">Войти</button>
   {/snippet}
 
   {#snippet extra()}
