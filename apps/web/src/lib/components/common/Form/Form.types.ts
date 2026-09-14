@@ -1,5 +1,10 @@
 import type { Snippet } from 'svelte';
 
 export interface IForm {
-  children: Snippet;
+  className?: string;
+  header?: Snippet;
+  body?: Snippet;
+  message?: Snippet;
+  buttons?: Snippet;
+  extra?: Snippet;
 }

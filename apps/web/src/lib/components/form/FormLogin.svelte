@@ -1,75 +1,60 @@
 <script lang="ts">
   import { resolve } from "$app/paths";
+  import { Form } from "../common/Form";
+  import { APP_NAME } from "$lib/constants";
+
+  let mes = $state('');
+
+  const click = () => { mes = '123'; }
 </script>
 
-<form class="login-form">
-  <h1 class="login-form__header">ProjectWorkspace</h1>
+<Form className="form_login">
+  {#snippet header()}
+    <h1>{APP_NAME}</h1>
+  {/snippet}
 
-  <label class="field">
-    <span>Логин</span>
-    <input
-      type="text"
-      placeholder="Введите логин"
-    />
-  </label>
+  {#snippet body()}
+    <label class="field">
+      <span>Логин</span>
+      <input
+        type="text"
+        placeholder="Введите логин"
+      />
+    </label>
 
-  <label class="field">
-    <span>Пароль</span>
-    <input
-      type="password"
-      placeholder="Введите пароль"
-    />
-  </label>
+    <label class="field">
+      <span>Пароль</span>
+      <input
+        type="password"
+        placeholder="Введите пароль"
+      />
+    </label>
 
-  <label class="remember">
-    <input type="checkbox" />
-    <span>Запомнить меня</span>
-  </label>
+    <label class="remember">
+      <input type="checkbox" />
+      <span>Запомнить меня</span>
+    </label>
+  {/snippet}
 
-  <button class="button button_primary">Войти</button>
+  {#snippet message()}
+    <p>{mes}</p>
+  {/snippet}
 
-  <div class="login-form__links">
+  {#snippet buttons()}
+    <button class="button button_primary" onclick={click}>Войти</button>
+  {/snippet}
+
+  {#snippet extra()}
     <p>Ещё нет аккаунта?
       <a href={resolve('/signup')}>Зарегистрироваться</a>
     </p>
     <a href={resolve('/')}>А можно просто посмотреть?</a>
-  </div>
-</form>
+  {/snippet}
+</Form>
 
 <style lang="postcss">
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    gap: var(--indent);
-    position: relative;
-
-    &__header {
-      text-align: center;
-      margin: 0;
-      color: var(--color-text);
-      font-size: 2rem;
-    }
-
-    &__links {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-
-      p {
-        margin-top: var(--indent-half);
-        color: var(--color-text-secondary);
-      }
-
-      a {
-        color: var(--color-primary);
-        text-decoration: none;
-        transition: color var(--transition-base);
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
+  :global(.form_login) {
+    width: 18rem;
   }
 
   .field {
