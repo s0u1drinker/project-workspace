@@ -8,3 +8,7 @@ export interface IForm {
   buttons?: Snippet;
   extra?: Snippet;
 }
+
+export interface IFormField {
+  children: Snippet;
+}
