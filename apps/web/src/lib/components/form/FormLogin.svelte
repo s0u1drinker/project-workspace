@@ -1,9 +1,14 @@
 <script lang="ts">
   import { resolve } from "$app/paths";
+  import { FieldLogin, FieldPassword } from "../field";
   import { Form } from "../common/Form";
+  import { InputCheckbox } from "../ui/Input";
   import { ErrorText } from "../ui/ErrorText/";
-  import { APP_NAME } from "$lib/constants";
+  import { APP_NAME, FORM_LABEL } from "$lib/constants";
 
+  let login = $state('');
+  let password = $state('');
+  let remember = $state(false);
   let errorText = $state('');
 </script>
 
@@ -13,26 +18,9 @@
   {/snippet}
 
   {#snippet body()}
-    <label class="field">
-      <span>Логин</span>
-      <input
-        type="text"
-        placeholder="Введите логин"
-      />
-    </label>
-
-    <label class="field">
-      <span>Пароль</span>
-      <input
-        type="password"
-        placeholder="Введите пароль"
-      />
-    </label>
-
-    <label class="remember">
-      <input type="checkbox" />
-      <span>Запомнить меня</span>
-    </label>
+    <FieldLogin bind:value={login} />
+    <FieldPassword bind:value={password} />
+    <InputCheckbox bind:checked={remember} label={FORM_LABEL.remember} />
   {/snippet}
 
   {#snippet message()}
@@ -54,50 +42,6 @@
 <style lang="postcss">
   :global(.form_login) {
     width: 18rem;
-  }
-
-  .field {
-    display: flex;
-    flex-direction: column;
-    gap: var(--indent-quarter);
-
-    span {
-      color: var(--color-text-secondary);
-      font-size: .875rem;
-    }
-
-    input {
-      height: 2.75rem;
-      padding: 0 var(--indent);
-      border: var(--border) rgba(255,255,255,.5);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.35);
-      color: var(--color-text);
-      transition:
-        border-color var(--transition-base),
-        background-color var(--transition-base);
-
-      &:focus {
-        outline: none;
-        border-color: var(--color-primary);
-        background: rgba(255,255,255,.65);
-      }
-
-      &::placeholder {
-        color: var(--color-text-secondary);
-      }
-    }
-  }
-
-  .remember {
-    display: flex;
-    align-items: center;
-    gap: var(--indent-half);
-    color: var(--color-text-secondary);
-    font-size: .875rem;
-    cursor: pointer;
-    user-select: none;
-    width: fit-content;
   }
 
   .button {
