@@ -1,25 +1,23 @@
-import type { TInputTypeMap, TInputNameMap, TInputIconMap } from '$lib/components/ui/Input';
-
-/** Список компонентов Input. */
-export const INPUT_COMPONENT_NAMES = {
-  text: 'InputText',
-  password: 'InputPassword',
-  number: 'InputNumber',
-  email: 'InputEmail',
-  search: 'InputSearch'
-} as const satisfies TInputNameMap;
+import type { TInputTypeMap, TInputIconMap } from '$lib/components/ui/Input';
 
 /** Список типов Input. */
-export const INPUT_TYPES = {
+export const INPUT_TYPE = {
   text: 'text',
   password: 'password',
   number: 'number',
   email: 'email',
-  search: 'search'
+  search: 'search',
+  checkbox: 'checkbox'
 } as const satisfies TInputTypeMap;
 
-export const INPUT_DEFAULT_PLACEHOLDER = 'Введите значение';
-export const INPUT_PASSWORD_PLACEHOLDER = 'Введите пароль';
+/** Список дефолтных placeholder. */
+export const INPUT_PLACEHOLDER = {
+  text: 'Введите значение',
+  password: 'Введите пароль',
+  email: 'Введите e-mail',
+  search: 'Что ищете?',
+  login: 'Введите логин'
+} as const;
 
 export const INPUT_ICON_MAP = {
   eyeOpen: 'local:eye-open',

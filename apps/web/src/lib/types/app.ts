@@ -1,5 +1,8 @@
 import type { AriaAttributes } from 'svelte/elements';
 
+/** Ориентация. */
+export type TOrient = 'vertical' | 'horizontal';
+
 /** Тип для списка ошибок. */
 export type TErrorMap = Record<string, string>;
 

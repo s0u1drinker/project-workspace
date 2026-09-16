@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { INPUT_PASSWORD_PLACEHOLDER, INPUT_ICON_MAP, INPUT_TYPES } from "$lib/constants";
+  import { INPUT_PLACEHOLDER, INPUT_ICON_MAP, INPUT_TYPE } from "$lib/constants";
   import Button from "../Button";
   import InputWrapper from "./InputWrapper.svelte";
   import type { TIconName } from "$lib/types";
@@ -7,14 +7,14 @@
 
   let {
     value = $bindable(),
-    placeholder = INPUT_PASSWORD_PLACEHOLDER,
+    placeholder = INPUT_PLACEHOLDER.password,
     icon,
     ...props
   }: IInputPassword = $props();
   let showPassword: boolean = $state(false);
 
   const iconName: TIconName = $derived(showPassword ? INPUT_ICON_MAP.eyeSlashed : INPUT_ICON_MAP.eyeOpen);
-  const inputType = $derived(showPassword ? INPUT_TYPES.text : INPUT_TYPES.password);
+  const inputType = $derived(showPassword ? INPUT_TYPE.text : INPUT_TYPE.password);
   const ariaLabel = $derived(showPassword ? 'Скрыть пароль' : 'Показать пароль');
 
   const changeVision = () => showPassword = !showPassword
