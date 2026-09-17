@@ -5,7 +5,10 @@ import { globalMixins } from './postcss-global-mixins.js';
 const config = {
   preprocess: [globalMixins(), vitePreprocess()],
   kit: {
-    adapter: adapter()
+    adapter: adapter(),
+    alias: {
+      $components: './src/lib/components'
+    }
   }
 };
 
