@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Icon from "../Icon";
+  import { Icon } from "$components";
   import type { IButton } from "./Button.types";
 
   const {

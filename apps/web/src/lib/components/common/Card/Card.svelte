@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { CARD_COMPONENT_CLASS } from "$lib/constants";
+  import { COMPONENT } from "$lib/constants";
   import type { ICard } from "./Card.types";
 
   const { children, variant }: ICard = $props();
-  const cardVariantClass = $derived(variant ? `${CARD_COMPONENT_CLASS}_${variant}` : null);
+  const cardVariantClass = $derived(variant ? `${COMPONENT.CLASS.card}_${variant}` : null);
 </script>
 
-<div class={[CARD_COMPONENT_CLASS, cardVariantClass]}>
+<div class={[COMPONENT.CLASS.card, cardVariantClass]}>
   {@render children()}
 </div>
 

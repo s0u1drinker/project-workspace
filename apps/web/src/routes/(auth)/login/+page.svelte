@@ -1,6 +1,5 @@
 <script>
-  import { FormLogin } from "$lib/components/form";
-  import Card from "$lib/components/common/Card";
+  import { FormLogin, Card } from "$components";
 </script>
 
 <svelte:head>

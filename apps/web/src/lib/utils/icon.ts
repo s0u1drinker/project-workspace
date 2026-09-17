@@ -1,9 +1,4 @@
-import {
-  ICON_LOCAL_PREFIX,
-  ICON_DELIMITER,
-  ICON_COMPONENT_NAME,
-  ICON_ERRORS
-} from '$lib/constants';
+import { COMPONENT, ICON_LOCAL_PREFIX, ICON_DELIMITER, ICON_ERRORS } from '$lib/constants';
 import { showComponentWarning } from './app';
 import type { TIconName, TIconData, TIconRegistry, TSplittedIconName } from '$lib/types';
 import type { TIcon, TIconLocal } from '$lib/components/ui/Icon';
@@ -72,7 +67,7 @@ export function getIconData(iconName: TIconName): TIconData | null {
  * @param text Текст предупреждения.
  */
 function showIconWarning(text: string) {
-  showComponentWarning(ICON_COMPONENT_NAME, text);
+  showComponentWarning(COMPONENT.NAME.icon, text);
 }
 
 /**

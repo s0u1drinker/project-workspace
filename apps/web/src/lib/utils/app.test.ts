@@ -1,11 +1,5 @@
 import { showComponentWarning } from './app';
-import {
-  ICON_COMPONENT_NAME,
-  ICON_ERRORS,
-  BUTTON_COMPONENT_NAME,
-  NONAME,
-  NO_MESSAGE_TEXT
-} from '$lib/constants';
+import { COMPONENT, ICON_ERRORS, NONAME, NO_MESSAGE_TEXT } from '$lib/constants';
 import type { MockInstance } from 'vitest';
 
 describe('Функция showComponentWarning:', () => {
@@ -20,9 +14,9 @@ describe('Функция showComponentWarning:', () => {
   });
 
   it('- выводит в консоль предупреждение с именем компонента и текстом', () => {
-    showComponentWarning(ICON_COMPONENT_NAME, ICON_ERRORS.wrongName);
+    showComponentWarning(COMPONENT.NAME.icon, ICON_ERRORS.wrongName);
 
-    expect(warningSpy).toHaveBeenCalledWith(`[${ICON_COMPONENT_NAME}]: ${ICON_ERRORS.wrongName}.`);
+    expect(warningSpy).toHaveBeenCalledWith(`[${COMPONENT.NAME.icon}]: ${ICON_ERRORS.wrongName}.`);
   });
 
   it(`- если не передано имя компонента, то выводит "${NONAME}"`, () => {
@@ -32,9 +26,9 @@ describe('Функция showComponentWarning:', () => {
   });
 
   it(`- если не передан текст предупреждения, то выводит "${NO_MESSAGE_TEXT}"`, () => {
-    showComponentWarning(BUTTON_COMPONENT_NAME, '');
+    showComponentWarning(COMPONENT.NAME.button, '');
 
-    expect(warningSpy).toHaveBeenCalledWith(`[${BUTTON_COMPONENT_NAME}]: ${NO_MESSAGE_TEXT}.`);
+    expect(warningSpy).toHaveBeenCalledWith(`[${COMPONENT.NAME.button}]: ${NO_MESSAGE_TEXT}.`);
   });
 
   it('- если все параметры функции являются falsy-значениями, то выводит значения по умолчанию', () => {

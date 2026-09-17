@@ -1,7 +1,6 @@
 <script lang="ts">
   import { INPUT_PLACEHOLDER, INPUT_ICON_MAP, INPUT_TYPE } from "$lib/constants";
-  import Button from "../Button";
-  import InputWrapper from "./InputWrapper.svelte";
+  import { Button, InputWrapper } from '$components';
   import type { TIconName } from "$lib/types";
   import type { IInputPassword } from "./Input.types";
 

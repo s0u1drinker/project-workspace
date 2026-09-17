@@ -1,6 +1,6 @@
 <script lang="ts">
   import { APP_NAME } from "$lib/constants";
-  import Icon from "$lib/components/ui/Icon";
+  import { Icon } from "$components";
   import { InputCheckbox } from "$lib/components/ui/Input";
 
   let boxChecked = $state(true);
