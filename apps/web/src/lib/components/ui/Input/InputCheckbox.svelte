@@ -9,9 +9,10 @@
   }: IInputCheckbox = $props();
 </script>
 
-<label class="i-checkbox">
+<label class="input_checkbox">
   <input
     type="checkbox"
+    class="input_checkbox__checkbox"
     bind:checked
     {...props}
   />
@@ -25,12 +26,5 @@
 </label>
 
 <style lang="postcss">
-  .i-checkbox {
-    display: inline-grid;
-    grid-template-columns: auto 1fr;
-    align-items: baseline;
-    gap: var(--indent-half);
-    cursor: pointer;
-    user-select: none;
-  }
+  @import './Input.postcss';
 </style>

@@ -36,4 +36,21 @@
   &_password {
     padding-right: var(--input-padding);
   }
+
+  &_checkbox {
+    display: inline-grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: var(--indent-half);
+    cursor: pointer;
+    user-select: none;
+    width: fit-content;
+
+    &__checkbox {
+      --checkbox-size: 1.125rem;
+
+      width: var(--checkbox-size);
+      height: var(--checkbox-size);
+    }
+  }
 }
