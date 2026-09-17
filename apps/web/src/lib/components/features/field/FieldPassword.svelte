@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { Field } from "../common/Field";
-  import { InputPassword } from "../ui/Input";
+  import { Field, InputPassword } from "$components";
   import { FORM_LABEL } from "$lib/constants";
   import type { TFieldBase } from "./field.types";
 

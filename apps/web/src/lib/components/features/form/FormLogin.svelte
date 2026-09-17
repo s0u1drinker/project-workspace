@@ -1,9 +1,6 @@
 <script lang="ts">
   import { resolve } from "$app/paths";
-  import { FieldLogin, FieldPassword } from "../field";
-  import { Form } from "../common/Form";
-  import { InputCheckbox } from "../ui/Input";
-  import { ErrorText } from "../ui/ErrorText/";
+  import { Form, FieldLogin, FieldPassword, ErrorText, InputCheckbox } from "$components";
   import { APP_NAME, FORM_LABEL } from "$lib/constants";
 
   let login = $state('');
@@ -29,41 +26,18 @@
 
   {#snippet buttons()}
     <button class="button button_primary">Войти</button>
+    <button class="button button_primary">А можно просто посмотреть?</button>
   {/snippet}
 
   {#snippet extra()}
     <p>Ещё нет аккаунта?
       <a href={resolve('/signup')}>Зарегистрироваться</a>
     </p>
-    <a href={resolve('/')}>А можно просто посмотреть?</a>
   {/snippet}
 </Form>
 
 <style lang="postcss">
   :global(.form_login) {
     width: 18rem;
-  }
-
-  .button {
-    height: 2.75rem;
-    border-radius: var(--radius);
-    cursor: pointer;
-    transition:
-      transform var(--transition-base),
-      background-color var(--transition-base);
-
-    &:active {
-      transform: scale(.97);
-    }
-
-    &_primary {
-      border: none;
-      background: var(--color-primary);
-      color: var(--color-white);
-
-      &:hover {
-        background: hsl(from var(--color-primary) h s calc(l - 10));
-      }
-    }
   }
 </style>

@@ -1,3 +1,4 @@
+export { default as InputWrapper } from './InputWrapper.svelte';
 export { default as InputText } from './InputText.svelte';
 export { default as InputPassword } from './InputPassword.svelte';
 export { default as InputCheckbox } from './InputCheckbox.svelte';

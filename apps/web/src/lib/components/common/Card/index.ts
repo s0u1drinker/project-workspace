@@ -1,2 +1,2 @@
-export { default } from './Card.svelte';
+export { default as Card } from './Card.svelte';
 export type * from './Card.types';

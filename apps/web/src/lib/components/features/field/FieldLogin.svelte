@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { Field } from "../common/Field";
-  import { InputText } from "../ui/Input";
+  import { Field, InputText } from "$components";
   import { FORM_LABEL, INPUT_PLACEHOLDER } from "$lib/constants";
   import type { TFieldBase } from "./field.types";
 
