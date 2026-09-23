@@ -7,7 +7,7 @@
 </svelte:head>
 
 <main class="login-container">
-  <Card>
+  <Card variant='login'>
     <FormLogin />
   </Card>
 </main>

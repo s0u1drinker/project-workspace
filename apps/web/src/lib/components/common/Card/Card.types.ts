@@ -1,6 +1,6 @@
 import type { Snippet } from 'svelte';
 
-type CardVariant = 'glass';
+type CardVariant = 'glass' | 'login';
 
 export interface ICard {
   children: Snippet;
