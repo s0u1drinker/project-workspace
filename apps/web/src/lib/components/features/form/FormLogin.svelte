@@ -2,10 +2,7 @@
   import { resolve } from "$app/paths";
   import { Button, Form, FieldLogin, FieldPassword, ErrorText, InputCheckbox } from "$components";
   import { APP_NAME, FORM_LABEL, FORM_LOGIN_BUTTON_TEXT, FORM_LOGIN_BUTTON_GUEST_TEXT } from "$lib/constants";
-/**
- * TODO:
- * 1. Проверить форму на разных экранах.
- */
+
   let login = $state('');
   let password = $state('');
   let remember = $state(false);

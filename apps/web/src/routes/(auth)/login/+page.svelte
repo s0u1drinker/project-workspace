@@ -20,10 +20,13 @@
     min-height: 100%;
     padding: var(--indent);
     overflow: hidden;
-    background: linear-gradient(
-      135deg,
-      var(--color-gradient-1),
-      var(--color-gradient-2)
-    );
+
+    @media (--viewport-sm) {
+      background: linear-gradient(
+        135deg,
+        var(--color-gradient-1),
+        var(--color-gradient-2)
+      );
+    }
   }
 </style>
