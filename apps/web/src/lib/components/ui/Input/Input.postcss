@@ -1,6 +1,6 @@
 .input {
   --input-border-color: var(--color-gray);
-  --input-padding: var(--indent-three-quarters);
+  --input-padding: var(--indent-half);
 
   background-color: var(--color-bg-body);
   border: var(--border) var(--input-border-color);
@@ -9,6 +9,10 @@
   align-items: center;
   overflow: hidden;
   transition: border-color var(--transition-base);
+
+  @media (--viewport-sm) {
+    --input-padding: var(--indent-three-quarters);
+  }
 
   @mixin hover {
     --input-border-color: var(--color-primary);

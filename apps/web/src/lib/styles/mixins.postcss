@@ -28,9 +28,15 @@
 }
 
 @define-mixin focus-shadow $color: var(--color-primary) {
+  --shadow-width: 1px;
+
   box-shadow:
-    0 0 0 2px var(--color-bg-body),
-    0 0 0 4px $color;
+    0 0 0 var(--shadow-width) var(--color-bg-body),
+    0 0 0 calc(var(--shadow-width) * 2) $color;
+
+  @media (--viewport-sm) {
+    --shadow-width: 2px;
+  }
 }
 
 @define-mixin glass {
