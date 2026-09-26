@@ -1,10 +1,10 @@
 .button {
   --button-gap: var(--indent-quarter);
   --button-padding: var(--indent-half) var(--indent);
-  --button-border: 0 none;
   --button-border-radius: var(--radius);
   --button-bg-color: var(--color-primary);
   --button-txt-color: var(--color-white);
+  --button-line-height: 1.15;
 
   display: inline-flex;
   align-items: center;
@@ -15,14 +15,19 @@
   -webkit-tap-highlight-color: transparent;
   gap: var(--button-gap);
   padding: var(--button-padding);
-  border: var(--button-border);
+  border: var(--border-thick) transparent;
   border-radius: var(--button-border-radius);
   background-color: var(--button-bg-color);
   color: var(--button-txt-color);
+  line-height: var(--button-line-height);
   transition:
     color var(--transition-base),
     background-color var(--transition-base),
     transform var(--transition-base);
+
+  @media (--viewport-sm) {
+    --button-line-height: var(--base-line-height);
+  }
 
   &:active:not(:disabled) {
     transform: scale(0.95);
@@ -80,7 +85,7 @@
   }
 
   &_outline {
-    border: var(--border-thick) var(--button-bg-color);
+    border-color: var(--button-bg-color);
     background-color: transparent;
     color: var(--button-bg-color);
 
