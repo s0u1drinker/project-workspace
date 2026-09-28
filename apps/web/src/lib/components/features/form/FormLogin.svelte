@@ -30,7 +30,7 @@
   {/snippet}
 
   {#snippet extra()}
-    <p>Ещё нет аккаунта?
+    <p>Нет аккаунта?
       <a href={resolve('/signup')}>Зарегистрироваться</a>
     </p>
   {/snippet}
