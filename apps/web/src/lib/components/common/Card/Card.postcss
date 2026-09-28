@@ -1,29 +1,50 @@
   .card {
-    --card-padding: var(--indent-double);
+    --card-padding-ver: var(--indent-double);
+    --card-padding-hor: var(--indent-double);
+    --card-padding: var(--card-padding-ver) var(--card-padding-hor);
+    --card-border: var(--border) var(--color-gray);
+    --card-border-radius: var(--radius);
+    --card-shadow: var(--shadow);
+    --card-gap: var(--card-padding-ver);
 
-    width: fit-content;
-    padding: var(--card-padding);
-    background-color: var(--color-bg-body);
-    border: var(--border) var(--color-gray);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
-    gap: var(--card-padding);
+    width: fit-content;
+    background-color: var(--color-bg-body);
+    padding: var(--card-padding);
+    border: var(--card-border);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-shadow);
+    gap: var(--card-gap);
 
     &_glass {
       @mixin glass;
     }
 
     &_login {
-      border: 0 none;
-      box-shadow: none;
-      padding: 0;
+      --card-border: 0 none;
+      --card-shadow: none;
+      --card-padding: 0;
       
       @media (--viewport-sm) {
-        border: var(--border) var(--color-gray);
-        box-shadow: var(--shadow-md);
-        padding: var(--card-padding);
+        --card-border: var(--border) var(--color-gray);
+        --card-shadow: var(--shadow-md);
+        --card-padding: var(--card-padding-ver) var(--card-padding-hor);
+      }
+    }
+
+    &_signup {
+      --card-border: 0 none;
+      --card-shadow: none;
+      --card-padding: var(--card-padding-ver) 0;
+      --card-border-radius: 0;
+
+      @media (--viewport-sm) {
+        --card-shadow: var(--shadow-md);
+        --card-padding: var(--card-padding-ver) calc(var(--card-padding-hor) * 2);
+
+        border-left: var(--border) var(--color-gray);
+        justify-content: center;
       }
     }
   }
