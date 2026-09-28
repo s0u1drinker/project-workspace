@@ -1,13 +1,33 @@
+<script>
+  import { Card, FormSignup } from "$components";
+</script>
+
 <svelte:head>
-  <title>Sign Up | ProjectWorkspace</title>
+  <title>Регистрация | ProjectWorkspace</title>
 </svelte:head>
 
-<main class="signup-container cover">
-  <h1>Sign Up</h1>
+<main class="signup-container">
+  <Card variant='signup'>
+    <FormSignup />
+  </Card>
 </main>
 
 <style lang="postcss">
   .signup-container {
-    background: linear-gradient(135deg, var(--color-gradient-1), var(--color-gradient-2));
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 100%;
+    overflow: hidden;
+
+    @media (--viewport-sm) {
+      place-items: unset;
+      justify-content: end;
+      background: linear-gradient(
+        180deg,
+        var(--color-gradient-1),
+        var(--color-gradient-2)
+      );
+    }
   }
 </style>
