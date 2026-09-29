@@ -17,17 +17,20 @@
     position: relative;
     display: grid;
     place-items: center;
-    min-height: 100%;
+    min-height: 100dvh;
     overflow: hidden;
 
     @media (--viewport-sm) {
-      place-items: unset;
-      justify-content: end;
       background: linear-gradient(
         180deg,
         var(--color-gradient-1),
         var(--color-gradient-2)
       );
+    }
+
+    @media (--viewport-lg) {
+      place-items: unset;
+      justify-content: end;
     }
   }
 </style>
