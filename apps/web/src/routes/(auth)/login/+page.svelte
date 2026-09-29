@@ -17,7 +17,7 @@
     position: relative;
     display: grid;
     place-items: center;
-    min-height: 100%;
+    min-height: 100dvh;
     padding: var(--indent);
     overflow: hidden;
 
