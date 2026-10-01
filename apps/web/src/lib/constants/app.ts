@@ -26,3 +26,9 @@ export const FORM_LABEL = {
   password: 'Пароль',
   remember: 'Запомнить меня'
 } as const;
+
+export const PATH_NAME = {
+  login: '/login',
+  signup: '/signup',
+  index: '/'
+};
