@@ -31,4 +31,22 @@ export const PATH_NAME = {
   login: '/login',
   signup: '/signup',
   index: '/'
-};
+} as const;
+
+export const APP_ERROR = {
+  403: {
+    title: 'Доступ запрещён',
+    message: 'У вас нет доступа к этой странице.'
+  },
+  404: {
+    title: 'Страница не найдена',
+    message: 'Запрашиваемая страница не существует.'
+  },
+  500: {
+    title: 'Ошибка сервера',
+    message: 'Что-то пошло не так. Попробуйте повторить попытку позже.'
+  }
+} as const satisfies Record<number, { title: string; message: string }>;
+
+export const DEFAULT_ERROR_TITLE = 'Произошла ошибка';
+export const DEFAULT_ERROR_MESSAGE = 'Не удалось выполнить запрос.';
