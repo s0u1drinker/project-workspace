@@ -1,19 +1,18 @@
 import { redirect } from '@sveltejs/kit';
-import { PATH_NAME } from '$lib/constants';
+import { PATH_NAME, APP_COOKIES } from '$lib/constants';
 import type { Handle } from '@sveltejs/kit';
 
-const isAuthenticated = false;
-
 export const handle: Handle = async ({ event, resolve }) => {
-  const { pathname } = event.url;
-  const isAuthPage = pathname.startsWith(PATH_NAME.login) || pathname.startsWith(PATH_NAME.signup);
-  const isAppPage = pathname === PATH_NAME.index;
+  const routeId = event.route.id;
+  const isAppRoute = routeId?.startsWith('/(app)');
+  const isAuthRoute = routeId?.startsWith('/(auth)');
+  const isAuthenticated = Boolean(event.cookies.get(APP_COOKIES.demoAuth));
 
-  if (!isAuthenticated && isAppPage) {
+  if (!isAuthenticated && isAppRoute) {
     throw redirect(303, PATH_NAME.login);
   }
 
-  if (isAuthenticated && isAuthPage) {
+  if (isAuthenticated && isAuthRoute) {
     throw redirect(303, PATH_NAME.index);
   }
 
