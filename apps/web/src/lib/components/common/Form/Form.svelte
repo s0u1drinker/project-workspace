@@ -1,10 +1,15 @@
 <script lang="ts">
+  import { HTTP_METHOD } from "$lib/constants";
   import type { IForm } from "./Form.types";
 
-  const { className, header, body, message, buttons, extra }: IForm = $props();
+  const { className, method = HTTP_METHOD.GET, action, header, body, message, buttons, extra }: IForm = $props();
 </script>
 
-<form class={[ 'form', className ]}>
+<form
+  class={[ 'form', className ]}
+  {method}
+  {action}
+>
   {#if header}
     <div class="form__header">
       {@render header()}
