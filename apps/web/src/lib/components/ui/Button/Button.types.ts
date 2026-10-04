@@ -10,6 +10,7 @@ export interface IButton extends TAccessibilityProps {
   children?: Snippet;
   type?: ButtonType;
   className?: string;
+  formAction?: string;
   color?: ButtonColor;
   variant?: ButtonVariant;
   disabled?: boolean;

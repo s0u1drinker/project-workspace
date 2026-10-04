@@ -7,6 +7,7 @@
     type = "button",
     color = "primary",
     variant = "default",
+    formAction,
     rounded,
     elevated,
     circle,
@@ -31,6 +32,7 @@
   class={className}
   type={type}
   disabled={props.disabled}
+  formaction={formAction}
   onclick={handleCLick}
   {...props}
 >
