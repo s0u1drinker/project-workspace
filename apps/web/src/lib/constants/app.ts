@@ -5,6 +5,14 @@ export const APP_NAME = 'ProjectWorkspace';
 export const NONAME = 'noname';
 export const NO_MESSAGE_TEXT = '-';
 
+export const HTTP_METHOD = {
+  GET: 'GET',
+  POST: 'POST',
+  PUT: 'PUT',
+  PATCH: 'PATCH',
+  DELETE: 'DELETE'
+} as const;
+
 export const COMPONENT = {
   NAME: {
     button: 'Button',
@@ -50,3 +58,7 @@ export const APP_ERROR = {
 
 export const DEFAULT_ERROR_TITLE = 'Произошла ошибка';
 export const DEFAULT_ERROR_MESSAGE = 'Не удалось выполнить запрос.';
+
+export const APP_API = {
+  authDemo: '/api/auth/demo'
+} as const;
