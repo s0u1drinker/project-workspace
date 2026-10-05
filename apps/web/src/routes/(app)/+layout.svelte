@@ -1,10 +1,11 @@
 <script lang="ts">
+  import { Logo } from "$components";
   let { children } = $props();
 </script>
 
 <div class="app-layout">
   <header class="app-layout__header">
-    Header
+    <Logo />
   </header>
 
   <main class="app-layout__content">
