@@ -35,12 +35,6 @@ export const FORM_LABEL = {
   remember: 'Запомнить меня'
 } as const;
 
-export const PATH_NAME = {
-  login: '/login',
-  signup: '/signup',
-  index: '/'
-} as const;
-
 export const APP_ERROR = {
   403: {
     title: 'Доступ запрещён',
