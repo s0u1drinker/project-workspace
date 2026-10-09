@@ -1,3 +1,8 @@
+export const PATH_NAME = {
+  login: '/login',
+  signup: '/signup'
+} as const;
+
 export const NAVIGATION = {
   index: {
     path: '/',
@@ -11,10 +16,4 @@ export const NAVIGATION = {
     path: '/workspace',
     title: 'Задачи'
   }
-} as const;
-
-export const PATH_NAME = {
-  login: '/login',
-  signup: '/signup',
-  index: '/'
 } as const;

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { resolve } from "$app/paths";
   import { Button, Form, FieldLogin, FieldPassword, ErrorText } from "$components";
-  import { APP_NAME, FORM_SIGNUP_HEADER_TEXT, FORM_SIGNUP_BUTTON_TEXT, FORM_LOGIN_BUTTON_GUEST_TEXT, HTTP_METHOD, APP_API } from "$lib/constants";
+  import { PATH_NAME, APP_NAME, FORM_SIGNUP_HEADER_TEXT, FORM_SIGNUP_BUTTON_TEXT, FORM_LOGIN_BUTTON_GUEST_TEXT, HTTP_METHOD, APP_API } from "$lib/constants";
 
   let username = $state('');
   let password = $state('');
@@ -40,7 +40,7 @@
 
     {#snippet extra()}
       <p>Уже есть аккаунт?
-        <a href={resolve('/login')}>Войти</a>
+        <a href={resolve(PATH_NAME.login)}>Войти</a>
       </p>
     {/snippet}
   </Form>
