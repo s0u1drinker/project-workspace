@@ -1,7 +1,9 @@
+import type { TNavigation, TPathName } from '$lib/types';
+
 export const PATH_NAME = {
   login: '/login',
   signup: '/signup'
-} as const;
+} as const satisfies TPathName;
 
 export const NAVIGATION = {
   index: {
@@ -16,4 +18,4 @@ export const NAVIGATION = {
     path: '/workspace',
     title: 'Задачи'
   }
-} as const;
+} as const satisfies TNavigation;
