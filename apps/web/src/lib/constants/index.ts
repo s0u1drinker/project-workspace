@@ -4,3 +4,4 @@ export * from './input';
 export * from './form';
 export * from './cookies';
 export * from './navigation';
+export * from './aria';
