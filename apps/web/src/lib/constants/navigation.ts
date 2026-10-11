@@ -19,3 +19,6 @@ export const NAVIGATION = {
     title: 'Задачи'
   }
 } as const satisfies TNavigation;
+
+export const NAV_LINK_CLASS = 'navigation__link';
+export const NAV_LINK_ACTIVE_CLASS = `${NAV_LINK_CLASS}_active`;

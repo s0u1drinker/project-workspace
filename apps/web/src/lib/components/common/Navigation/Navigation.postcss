@@ -1,4 +1,14 @@
 .navigation {
-  display: flex;
-  gap: var(--indent);
+
+  &__list {
+    display: flex;
+    gap: var(--indent);
+  }
+
+  &__link {
+
+    &_active {
+      color: var(--color-secondary);
+    }
+  }
 }
