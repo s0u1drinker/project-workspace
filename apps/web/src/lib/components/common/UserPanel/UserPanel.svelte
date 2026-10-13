@@ -1,11 +1,16 @@
 <script lang="ts">
-  import { Button } from '$components';
+  import { Avatar } from '$components';
 </script>
 
 <div class="user-panel">
-  <Button size="small">
-    <div>UserPanel</div>
-  </Button>
+  <button
+    class="user-panel__button"
+    aria-label="Меню пользователя"
+    popovertarget="idMenu"
+  >
+    <Avatar />
+    <span>UserName</span>
+  </button>
 </div>
 
 <style lang="postcss">
