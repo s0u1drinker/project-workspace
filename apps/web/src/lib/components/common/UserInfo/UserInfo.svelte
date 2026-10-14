@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Avatar } from '$components';
+  import { Avatar, UserMenu } from '$components';
 </script>
 
 <div class="user-panel">
@@ -11,6 +11,7 @@
     <Avatar />
     <span>UserName</span>
   </button>
+  <UserMenu />
 </div>
 
 <style lang="postcss">
