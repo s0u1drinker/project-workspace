@@ -14,5 +14,5 @@
 </div>
 
 <style lang="postcss">
-  @import './UserPanel.postcss';
+  @import './UserInfo.postcss';
 </style>

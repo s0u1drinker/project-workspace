@@ -4,5 +4,5 @@ export * from './Form';
 export * from './Logo';
 export * from './Header';
 export * from './Navigation';
-export * from './UserPanel';
+export * from './UserInfo';
 export * from './Avatar';

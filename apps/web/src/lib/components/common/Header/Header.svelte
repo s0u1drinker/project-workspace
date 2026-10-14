@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { Logo, Navigation, UserPanel } from '$components';
+  import { Logo, Navigation, UserInfo } from '$components';
 </script>
 
 <header class="header">
   <Logo />
   <div class="header__user-block">
     <Navigation />
-    <UserPanel />
+    <UserInfo />
   </div>
 </header>
 
