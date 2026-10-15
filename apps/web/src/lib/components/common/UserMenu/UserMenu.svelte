@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { Avatar } from '$components';
+  import { UserIdentity } from '$components';
 </script>
 
 <div class="user-menu">
-  <Avatar />
-  UserMenu
+  <UserIdentity />
+  <div>UserMenu</div>
 </div>
 
 <style lang="postcss">
