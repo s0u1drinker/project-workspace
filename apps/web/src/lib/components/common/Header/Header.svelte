@@ -1,9 +1,10 @@
 <script lang="ts">
-  import { Logo, Navigation, UserInfo } from '$components';
+  import { Logo, Navigation, UserInfo, Breadcrumbs } from '$components';
 </script>
 
 <header class="header">
   <Logo />
+  <Breadcrumbs />
   <div class="header__user-block">
     <Navigation />
     <UserInfo />

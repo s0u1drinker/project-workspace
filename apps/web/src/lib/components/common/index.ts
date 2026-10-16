@@ -8,3 +8,4 @@ export * from './UserInfo';
 export * from './Avatar';
 export * from './UserMenu';
 export * from './UserIdentity';
+export * from './Breadcrumbs';
