@@ -1,17 +1,26 @@
 <script lang="ts">
   import { page } from '$app/state';
-  import { resolve } from "$app/paths";
   import { ARIA_LABEL } from '$constants';
 
-  const idProject = $derived(page.params?.id);
+  const params: string[] = $derived.by(() => {
+    if (page.params?.idProject) {
+      return [ page.params.idProject ];
+    }
+
+    return [];
+  });
 </script>
 
 <nav
   class="breadcrumbs"
   aria-label={ARIA_LABEL.breadcrumbs}
 >
-  <span class="breadcrumbs__delimiter">/</span>
-  <a href={resolve('/')}>{idProject}</a>
+  {#each params as param, key (key)}
+    <div class="breadcrumbs__item">
+      <span class="breadcrumbs__delimiter">/</span>
+      <span class="breadcrumbs__current-page">{ param }</span>
+    </div>
+  {/each}
 </nav>
 
 <style lang="postcss">
