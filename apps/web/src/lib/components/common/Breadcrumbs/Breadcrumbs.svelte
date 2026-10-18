@@ -7,6 +7,10 @@
       return [ page.params.idProject ];
     }
 
+    if (page.params?.idTask) {
+      return [ 'НазваниеПроекта', page.params.idTask ]
+    }
+
     return [];
   });
 </script>
