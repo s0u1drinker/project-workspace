@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from '$app/state';
   import { resolve } from "$app/paths";
+  import { Icon } from '$components';
   import { NAVIGATION, NAV_LINK_CLASS, NAV_LINK_ACTIVE_CLASS, ARIA_CURRENT_PAGE, ARIA_LABEL } from "$constants";
   
   const navList = $derived(Object.entries(NAVIGATION));
@@ -25,7 +26,11 @@
           class={getNavLinkClass(item.path)}
           aria-current={getAriaCurrent(item.path)}
         >
-          {item.title}
+          <Icon
+            class="navigation__link-icon"
+            icon={item.icon}
+          />
+          <span class="navigation__link-text">{item.title}</span>
         </a>
       </li>
     {/each}
