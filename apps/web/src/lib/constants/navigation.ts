@@ -8,15 +8,18 @@ export const PATH_NAME = {
 export const NAVIGATION = {
   index: {
     path: '/',
-    title: 'Главная'
+    title: 'Главная',
+    icon: 'local:tasks'
   },
   projects: {
     path: '/projects',
-    title: 'Проекты'
+    title: 'Проекты',
+    icon: 'local:projects'
   },
   workspace: {
     path: '/workspace',
-    title: 'Задачи'
+    title: 'Задачи',
+    icon: 'local:stats'
   }
 } as const satisfies TNavigation;
 
