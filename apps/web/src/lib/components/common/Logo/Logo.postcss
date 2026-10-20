@@ -3,6 +3,8 @@
 
   font-weight: bold;
   font-size: var(--logo-size);
+  display: flex;
+  align-items: center;
 
   &_sm {
     --logo-size: 1rem;
@@ -10,5 +12,10 @@
 
   &_lg {
     --logo-size: 1.5rem;
+  }
+
+  :global(&__icon) {
+    margin-right: -3px;
+    margin-left: -2px;
   }
 }
