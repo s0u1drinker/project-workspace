@@ -2,7 +2,7 @@
   import { UserIdentity } from '$components';
 </script>
 
-<div class="user-menu">
+<div class="user-menu" id="userMenu" popover>
   <UserIdentity />
   <div>UserMenu</div>
 </div>

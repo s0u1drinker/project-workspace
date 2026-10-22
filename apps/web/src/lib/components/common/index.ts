@@ -9,3 +9,4 @@ export * from './Avatar';
 export * from './UserMenu';
 export * from './UserIdentity';
 export * from './Breadcrumbs';
+export * from './UserButton';

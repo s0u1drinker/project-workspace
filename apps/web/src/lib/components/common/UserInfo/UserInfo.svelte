@@ -1,16 +1,10 @@
 <script lang="ts">
-  import { UserIdentity, UserMenu } from '$components';
-  import { ARIA_LABEL } from '$constants'; 
+  import { UserButton, UserMenu } from '$components';
+  
 </script>
 
-<div class="user-panel">
-  <button
-    class="user-panel__button"
-    aria-label={ARIA_LABEL.userMenu}
-    popovertarget="idMenu"
-  >
-    <UserIdentity />
-  </button>
+<div class="user-info">
+  <UserButton />
   <UserMenu />
 </div>
 

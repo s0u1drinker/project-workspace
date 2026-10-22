@@ -3,3 +3,21 @@
   flex-direction: column;
   position: absolute;
 }
+
+@starting-style {
+  [popover]:popover-open {
+    opacity: 0;
+    rotate: 1turn;
+  }
+}
+
+[popover]:popover-open {
+  opacity: 1;
+  rotate: 0turn;
+  transition: rotate .5s, opacity .5s, display .5s, overlay .5s;
+}
+
+[popover]:not(:popover-open) {
+  scale: 0;
+  transition: scale .3s, display .3s, overlay .3s;
+}
