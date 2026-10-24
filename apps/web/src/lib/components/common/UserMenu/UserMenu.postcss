@@ -1,23 +1,26 @@
 .user-menu {
+  position-anchor: --anchor-user-button;
+  top: anchor(inside);
+  left: anchor(inside);
   display: flex;
   flex-direction: column;
-  position: absolute;
-}
+  box-sizing: border-box;
 
-@starting-style {
-  [popover]:popover-open {
-    opacity: 0;
-    rotate: 1turn;
+  @starting-style {
+    &:popover-open {
+      opacity: 0;
+      scale: 0;
+    }
   }
-}
 
-[popover]:popover-open {
-  opacity: 1;
-  rotate: 0turn;
-  transition: rotate .5s, opacity .5s, display .5s, overlay .5s;
-}
+  &:popover-open {
+    opacity: 1;
+    scale: 1;
+    transition: scale .5s, opacity .5s, display .5s, overlay .5s;
+  }
 
-[popover]:not(:popover-open) {
-  scale: 0;
-  transition: scale .3s, display .3s, overlay .3s;
+  &:not(:popover-open) {
+    scale: 0;
+    transition: scale .3s, display .3s, overlay .3s;
+  }
 }
