@@ -12,5 +12,30 @@
 </div>
 
 <style lang="postcss">
-  @import './UserMenu.postcss';
+.user-menu {
+  position-anchor: --anchor-user-button;
+  top: anchor(inside);
+  left: anchor(inside);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  @starting-style {
+    &:popover-open {
+      opacity: 0;
+      scale: 0;
+    }
+  }
+
+  &:popover-open {
+    opacity: 1;
+    scale: 1;
+    transition: scale .5s, opacity .5s, display .5s, overlay .5s;
+  }
+
+  &:not(:popover-open) {
+    scale: 0;
+    transition: scale .3s, display .3s, overlay .3s;
+  }
+}
 </style>
