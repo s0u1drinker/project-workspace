@@ -13,29 +13,22 @@
 
 <style lang="postcss">
 .user-menu {
+  --popover-opacity: 0;
+  --popover-z-index: -1;
+
   position-anchor: --anchor-user-button;
   top: anchor(inside);
   left: anchor(inside);
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-
-  @starting-style {
-    &:popover-open {
-      opacity: 0;
-      scale: 0;
-    }
-  }
+  transition: opacity var(--transition-base), display var(--transition-base), overlay var(--transition-base);
+  opacity: var(--popover-opacity);
+  z-index: var(--popover-z-index);
 
   &:popover-open {
-    opacity: 1;
-    scale: 1;
-    transition: scale .5s, opacity .5s, display .5s, overlay .5s;
-  }
-
-  &:not(:popover-open) {
-    scale: 0;
-    transition: scale .3s, display .3s, overlay .3s;
+    --popover-opacity: 1;
+    --popover-z-index: 1;
   }
 }
 </style>
