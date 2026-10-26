@@ -13,5 +13,19 @@
 </button>
 
 <style lang="postcss">
-  @import './UserButton.postcss';
+.user-button {
+  --button-bgc: transparent;
+
+  anchor-name: --anchor-user-button;
+  padding: var(--indent-half) var(--indent);
+  border: var(--border) transparent;
+  background-color: var(--button-bgc);
+  transition: background-color var(--transition-base);
+  border-radius: var(--radius);
+  cursor: pointer;
+
+  @mixin hover {
+    --button-bgc: color-mix(in oklab, var(--color-primary) 15%, white);
+  }
+}
 </style>
