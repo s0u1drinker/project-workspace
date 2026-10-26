@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  transition: opacity var(--transition-base), display var(--transition-base), overlay var(--transition-base);
+  transition: opacity var(--transition-base);
   opacity: var(--popover-opacity);
   z-index: var(--popover-z-index);
 
