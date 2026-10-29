@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { UserIdentity } from '$components';
+  import { UserIdentity, UserNavigation, Separator } from '$components';
 </script>
 
 <div
@@ -8,7 +8,8 @@
   popover
 >
   <UserIdentity />
-  <div>UserMenu</div>
+  <Separator />
+  <UserNavigation />
 </div>
 
 <style lang="postcss">

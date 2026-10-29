@@ -7,6 +7,7 @@ export * from './Navigation';
 export * from './UserInfo';
 export * from './Avatar';
 export * from './UserMenu';
+export * from './UserNavigation';
 export * from './UserIdentity';
 export * from './Breadcrumbs';
 export * from './UserButton';
