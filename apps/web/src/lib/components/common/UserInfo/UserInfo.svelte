@@ -9,5 +9,9 @@
 </div>
 
 <style lang="postcss">
-  @import './UserInfo.postcss';
+.user-info {
+  display: flex;
+  position: relative;
+  min-width: 10rem;
+}
 </style>

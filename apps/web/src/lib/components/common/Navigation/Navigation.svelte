@@ -38,5 +38,63 @@
 </nav>
 
 <style lang="postcss">
-  @import './Navigation.postcss';
+.navigation {
+
+  &__list {
+    display: flex;
+    gap: var(--indent);
+  }
+
+  &__link {
+    --after-height: 2px;
+    --after-show-offset: calc(-1 * var(--after-height) * 2);
+
+    display: flex;
+    align-items: center;
+    gap: var(--indent-half);
+    position: relative;
+    padding-block: var(--indent-half);
+    color: var(--color-text);
+
+    &::after {
+      content: "";
+      width: 100%;
+      display: block;
+      height: var(--after-height);
+      background-color: var(--color-primary);
+      position: absolute;
+      bottom: 0;
+      opacity: 0;
+      transform: translateY(var(--after-height));
+      transition: transform var(--transition-base), opacity var(--transition-base), color var(--transition-base);
+    }
+
+    @mixin hover {
+      text-decoration: none;
+
+      &::after {
+        transform: translateY(var(--after-show-offset));
+        opacity: 1;
+      }
+    }
+
+    &_active {
+      pointer-events: none;
+      color: var(--color-black);
+
+      &::after {
+        transform: translateY(var(--after-show-offset));
+        opacity: 1;
+      }
+
+      :global(.navigation__link-icon) {
+        color: var(--color-primary);
+      }
+    }
+
+    :global(&-icon) {
+      color: var(--color-gray);
+    }
+  }
+}
 </style>

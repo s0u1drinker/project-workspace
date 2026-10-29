@@ -8,5 +8,8 @@
 </div>
 
 <style lang="postcss">
-  @import './UserIdentity.postcss';
+.user-identity{
+  display: flex;
+  color: var(--color-black);
+}
 </style>
