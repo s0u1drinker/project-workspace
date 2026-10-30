@@ -3,22 +3,22 @@
   --color-white: #fff;
   --color-gray: #a9a9a9;
   --color-black: #000;
-
   --color-primary: #3b82f6;
   --color-secondary: #7434b4;
   --color-success: #10b981;
   --color-warning: #f59e0b;
   --color-danger: #dc2626;
-  
   --color-svelte: #FF3E00;
-
-  --color-gradient-1: color-mix(in oklab, var(--color-primary) 30%, transparent);
-  --color-gradient-2: color-mix(in oklab, var(--color-secondary) 30%, transparent);
-  
   --color-text: #212c3d;
   --color-text-secondary: #64748b;
-
   --color-bg-body: var(--color-white);
+
+  --color-primary-15-tr: --mix-oklab-transparent(var(--color-primary), 15%);
+  --color-primary-30-tr: --mix-oklab-transparent(var(--color-primary), 30%);
+
+  --color-gradient-1: var(--color-primary-30-tr);
+  --color-gradient-2: --mix-oklab-transparent(var(--color-secondary), 30%);
+
   /* Шрифты */
   --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-size: 1rem;
