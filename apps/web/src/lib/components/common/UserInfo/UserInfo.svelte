@@ -12,6 +12,6 @@
 .user-info {
   display: flex;
   position: relative;
-  min-width: 10rem;
+  min-width: 11rem;
 }
 </style>
