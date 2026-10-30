@@ -11,5 +11,7 @@
 {/if}
 
 <style lang="postcss">
-  @import './Avatar.postcss';
+.avatar {
+  border-radius: var(--radius-full);
+}
 </style>
