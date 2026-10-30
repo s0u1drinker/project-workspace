@@ -15,6 +15,7 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
+		"@csstools/postcss-custom-functions": "^1.0.1",
 		"@csstools/postcss-global-data": "^4.0.0",
 		"@eslint/js": "^10.0.1",
 		"@iconify/svelte": "^5.2.2",

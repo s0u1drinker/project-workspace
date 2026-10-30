@@ -11,6 +11,7 @@ module.exports = {
     'postcss-custom-media': {},
     'postcss-mixins': {},
     'postcss-nested': {},
+    '@csstools/postcss-custom-functions': {},
     autoprefixer: {},
   }
 }

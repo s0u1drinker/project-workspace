@@ -1,5 +1,6 @@
 @import './normalize.css';
 
+@import './functions.postcss';
 @import './variables.css';
 @import './mixins.postcss';
 
