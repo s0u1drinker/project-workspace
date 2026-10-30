@@ -28,12 +28,12 @@ export const NAV_LINK_ACTIVE_CLASS = `${NAV_LINK_CLASS}_active`;
 
 export const USER_NAVIGATION = {
   profile: {
-    path: '/user',
+    path: '/user/profile',
     title: 'Профиль',
     icon: 'local:user'
   },
   settings: {
-    path: '/user',
+    path: '/user/settings',
     title: 'Настройки',
     icon: 'local:settings'
   }
