@@ -1,15 +1,20 @@
 <script lang="ts">
   import { UserIdentity, UserNavigation, Separator } from '$components';
+
+  let userMenu: HTMLDivElement;
+
+  const closeMenu = () => userMenu?.hidePopover();
 </script>
 
 <div
   class="user-menu"
   id="userMenu"
+  bind:this={userMenu}
   popover
 >
   <UserIdentity />
   <Separator />
-  <UserNavigation />
+  <UserNavigation onNavigate={closeMenu} />
 </div>
 
 <style lang="postcss">
@@ -28,7 +33,7 @@
   width: anchor-size(width);
   border: 0 none;
   border-radius: var(--radius);
-  padding: var(--indent-half) var(--indent);
+  padding: var(--indent-half) var(--indent) var(--indent);
   box-shadow: var(--shadow-md);
 
   &:popover-open {
