@@ -1,10 +1,15 @@
 <script lang="ts">
   import { Avatar } from '$components';
+  import { user } from '$stores';
 </script>
 
 <div class="user-identity">
-  <Avatar />
-  <span>UserName</span>
+  <Avatar
+    img={user.avatar}
+    avatarReplace='letters'
+    userInitials={user.initials}
+  />
+  <span>{ user.fullName }</span>
 </div>
 
 <style lang="postcss">
