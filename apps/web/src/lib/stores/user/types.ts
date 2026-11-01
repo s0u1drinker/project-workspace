@@ -1,4 +1,6 @@
-export type TAvatarReplace = 'svg' | 'letters';
+import { AVATAR_REPLACE } from '$constants';
+
+export type TAvatarReplace = keyof typeof AVATAR_REPLACE;
 
 export interface IUser {
   id: string;

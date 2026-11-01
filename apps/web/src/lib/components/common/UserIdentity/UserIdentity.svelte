@@ -1,12 +1,13 @@
 <script lang="ts">
   import { Avatar } from '$components';
+  import { AVATAR_REPLACE } from '$constants';
   import { user } from '$stores';
 </script>
 
 <div class="user-identity">
   <Avatar
     img={user.avatar}
-    avatarReplace='letters'
+    avatarReplace={AVATAR_REPLACE.letters}
     userInitials={user.initials}
   />
   <span>{ user.fullName }</span>
