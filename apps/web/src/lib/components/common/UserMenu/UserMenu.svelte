@@ -40,5 +40,9 @@
     --popover-opacity: 1;
     --popover-z-index: 1;
   }
+
+  :global(.user-identity) {
+    color: var(--color-black);
+  }
 }
 </style>

@@ -16,6 +16,8 @@
 <style lang="postcss">
 .user-identity{
   display: flex;
-  color: var(--color-black);
+  align-items: center;
+  color: var(--color-text);
+  gap: var(--indent-half);
 }
 </style>

@@ -43,7 +43,8 @@
 
 <style lang="postcss">
 .user-nav {
-  --items-gap: var(--indent-quarter);
+  --items-gap: var(--indent-half);
+  --items-border-radius: 4px;
 
   display: flex;
   flex-direction: column;
@@ -63,7 +64,7 @@
     padding-block: var(--indent-quarter);
     padding-inline: var(--indent-half);
     background-color: var(--link-bgc);
-    border-radius: var(--indent-half);
+    border-radius: var(--items-border-radius);
     display: flex;
     align-items: center;
     gap: var(--indent-quarter);
@@ -85,6 +86,7 @@
   :global(&__button.button) {
     padding-inline: var(--indent-half);
     justify-content: flex-start;
+    border-radius: var(--items-border-radius);
     border: 0 none;
     width: 100%;
   }
