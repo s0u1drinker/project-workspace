@@ -10,16 +10,37 @@
   }: IAvatar = $props();
 </script>
 
-{#if img}
-  <img class="avatar avatar_img" src={img} alt="Аватар">
-{:else if (avatarReplace === AVATAR_REPLACE.letters)}
-  <span class="avatar">{ userInitials }</span>
-{:else}
-  <Icon icon='local:user-avatar' />
-{/if}
+<div class="avatar">
+  {#if img}
+    <img
+      class="avatar__img"
+      src={img}
+      alt="Аватар"
+    />
+  {:else if (avatarReplace === AVATAR_REPLACE.letters)}
+    <div class="avatar__block">{ userInitials }</div>
+  {:else}
+    <Icon
+      className='avatar__icon'
+      icon='local:user-avatar'
+      size="2rem"
+    />
+  {/if}
+</div>
 
 <style lang="postcss">
 .avatar {
   border-radius: var(--radius-full);
+  width: 2rem;
+  height: 2rem;
+  
+  &__block {
+    padding: var(--indent-quarter);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: var(--indent-quarter);
+    display: grid;
+    place-items: center;
+  }
 }
 </style>
