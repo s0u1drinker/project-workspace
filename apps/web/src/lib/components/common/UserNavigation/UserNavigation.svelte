@@ -1,7 +1,7 @@
 <script lang="ts">
   import { resolve } from '$app/paths';
   import { page } from '$app/state';
-  import { Icon, Button } from '$components';
+  import { Icon, ButtonLogout } from '$components';
   import { ARIA_LABEL, USER_NAVIGATION, ARIA_CURRENT_PAGE } from "$constants";
   import type { IUserNavigation } from './UserNavigation.types';
 
@@ -31,20 +31,12 @@
       </li>
     {/each}
   </ul>
-  <Button
-    className="user-nav__button"
-    iconLeft="local:logout"
-    text="Выход"
-    color="danger"
-    variant="plain"
-    size="small"
-  />
+  <ButtonLogout />
 </nav>
 
 <style lang="postcss">
 .user-nav {
   --items-gap: var(--indent-half);
-  --items-border-radius: 4px;
 
   display: flex;
   flex-direction: column;
@@ -64,7 +56,7 @@
     padding-block: var(--indent-quarter);
     padding-inline: var(--indent-half);
     background-color: var(--link-bgc);
-    border-radius: var(--items-border-radius);
+    border-radius: 4px;
     display: flex;
     align-items: center;
     gap: var(--indent-quarter);
@@ -81,14 +73,6 @@
       color: var(--color-white);
       pointer-events: none;
     }
-  }
-
-  :global(&__button.button) {
-    padding-inline: var(--indent-half);
-    justify-content: flex-start;
-    border-radius: var(--items-border-radius);
-    border: 0 none;
-    width: 100%;
   }
 }
 </style>
