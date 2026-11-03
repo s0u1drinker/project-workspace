@@ -54,7 +54,8 @@ export const DEFAULT_ERROR_TITLE = 'Произошла ошибка';
 export const DEFAULT_ERROR_MESSAGE = 'Не удалось выполнить запрос.';
 
 export const APP_API = {
-  authDemo: '/api/auth/demo'
+  authDemo: '/api/auth/demo',
+  authLogout: '/api/auth/logout'
 } as const;
 
 export const AVATAR_REPLACE = {
