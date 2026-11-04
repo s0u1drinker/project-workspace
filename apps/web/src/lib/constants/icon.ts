@@ -7,3 +7,10 @@ export const ICON_ERRORS = {
   wrongName: 'Не удалось получить имя иконки',
   wrongPrefix: 'Не удалось получить префикс иконки'
 } as const satisfies TErrorMap;
+
+export const ICON_MAP = {
+  local: {
+    logout: `${ICON_LOCAL_PREFIX}${ICON_DELIMITER}logout`
+  },
+  iconify: {}
+} as const;

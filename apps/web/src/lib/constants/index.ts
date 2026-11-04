@@ -5,3 +5,4 @@ export * from './form';
 export * from './cookies';
 export * from './navigation';
 export * from './aria';
+export * from './button';
