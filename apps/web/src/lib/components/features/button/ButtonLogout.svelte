@@ -2,11 +2,11 @@
   import { goto } from '$app/navigation';
   import { resolve } from '$app/paths';
   import { Button } from '$components';
-  import { APP_API, PATH_NAME } from '$constants';
+  import { APP_API, PATH_NAME, HTTP_METHOD, BUTTON_TEXT, ICON_MAP } from '$constants';
 
   const logout = async () => {
     const response = await fetch(APP_API.authLogout, {
-      method: 'POST',
+      method: HTTP_METHOD.POST,
     });
 
     if (response.ok) {
@@ -17,8 +17,8 @@
 
 <Button
   className="button_logout"
-  iconLeft="local:logout"
-  text="Выход"
+  iconLeft={ICON_MAP.local.logout}
+  text={BUTTON_TEXT.logout}
   color="danger"
   variant="plain"
   size="small"
