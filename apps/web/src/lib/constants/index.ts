@@ -1,5 +1,5 @@
 export * from './app';
-export * from './icon';
+export * from './icon/index';
 export * from './input';
 export * from './form';
 export * from './cookies';

@@ -6,8 +6,6 @@ export type TInputType = 'text' | 'password' | 'number' | 'email' | 'search' | '
 
 export type TInputTypeMap = TValuesEqualsKeys<TInputType>;
 
-export type TInputIconMap = Record<string, TIconName>;
-
 interface IInputBase extends TAccessibilityProps {
   id?: string;
   name?: string;

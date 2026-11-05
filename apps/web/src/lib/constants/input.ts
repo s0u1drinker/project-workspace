@@ -1,4 +1,4 @@
-import type { TInputTypeMap, TInputIconMap } from '$lib/components/ui/Input';
+import type { TInputTypeMap } from '$lib/components/ui/Input';
 
 /** Список типов Input. */
 export const INPUT_TYPE = {
@@ -18,8 +18,3 @@ export const INPUT_PLACEHOLDER = {
   search: 'Что ищете?',
   login: 'Введите логин'
 } as const;
-
-export const INPUT_ICON_MAP = {
-  eyeOpen: 'local:eye-open',
-  eyeSlashed: 'local:eye-slashed'
-} as const satisfies TInputIconMap;

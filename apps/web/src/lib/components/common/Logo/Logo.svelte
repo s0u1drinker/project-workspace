@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { APP_NAME } from "$lib/constants";
+  import { APP_NAME, ICON_MAP } from "$constants";
   import { Icon } from '$components';
   import type { ILogo } from "./Logo.types";
 
@@ -14,7 +14,7 @@
   {logoText[0]}
   <Icon
     class="logo__icon"
-    icon="local:logo"
+    icon={ICON_MAP.local('logo')}
     size="1.5rem"
   />
   {logoText[1]}

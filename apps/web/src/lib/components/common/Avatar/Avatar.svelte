@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Icon } from '$components';
-  import { AVATAR_REPLACE } from '$constants'; 
+  import { AVATAR_REPLACE, ICON_MAP } from '$constants'; 
   import type { IAvatar } from "./Avatar.types";
 
   const {
@@ -22,7 +22,7 @@
   {:else}
     <Icon
       className='avatar__icon'
-      icon='local:user-avatar'
+      icon={ICON_MAP.local('user-avatar')}
       size="2rem"
     />
   {/if}

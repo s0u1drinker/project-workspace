@@ -1,6 +1,13 @@
-import { COMPONENT, ICON_LOCAL_PREFIX, ICON_DELIMITER, ICON_ERRORS } from '$lib/constants';
+import { COMPONENT, ICON_LOCAL_PREFIX, ICON_DELIMITER, ICON_ERRORS } from '$constants';
 import { showComponentWarning } from './app';
-import type { TIconName, TIconData, TIconRegistry, TSplittedIconName } from '$lib/types';
+import type {
+  TIconName,
+  TIconData,
+  TIconRegistry,
+  TSplittedIconName,
+  TLocalIcon,
+  TIconNameLocal
+} from '$lib/types';
 import type { TIcon, TIconLocal } from '$lib/components/ui/Icon';
 
 const icons: TIconRegistry = {};
@@ -115,4 +122,12 @@ function createIconRegistry(): void {
       icons[name] = data[1];
     }
   }
+}
+
+/**
+ * Возвращает наименование локальной иконки для компонента Icon.
+ * @param iconName Имя локальной иконки.
+ */
+export function getLocalIconName(iconName: TLocalIcon): TIconNameLocal {
+  return `${ICON_LOCAL_PREFIX}${ICON_DELIMITER}${iconName}`;
 }

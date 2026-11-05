@@ -17,7 +17,7 @@
 
 <Button
   className="button_logout"
-  iconLeft={ICON_MAP.local.logout}
+  iconLeft={ICON_MAP.local('logout')}
   text={BUTTON_TEXT.logout}
   color="danger"
   variant="plain"

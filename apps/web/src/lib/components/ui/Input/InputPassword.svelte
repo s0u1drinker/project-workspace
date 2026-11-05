@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { INPUT_PLACEHOLDER, INPUT_ICON_MAP, INPUT_TYPE } from "$lib/constants";
+  import { INPUT_PLACEHOLDER, ICON_MAP, INPUT_TYPE } from "$lib/constants";
   import { Button, InputWrapper } from '$components';
   import type { TIconName } from "$lib/types";
   import type { IInputPassword } from "./Input.types";
@@ -12,7 +12,7 @@
   }: IInputPassword = $props();
   let showPassword: boolean = $state(false);
 
-  const iconName: TIconName = $derived(showPassword ? INPUT_ICON_MAP.eyeSlashed : INPUT_ICON_MAP.eyeOpen);
+  const iconName: TIconName = $derived(showPassword ? ICON_MAP.local('eye-slashed') : ICON_MAP.local('eye-open'));
   const inputType = $derived(showPassword ? INPUT_TYPE.text : INPUT_TYPE.password);
   const ariaLabel = $derived(showPassword ? 'Скрыть пароль' : 'Показать пароль');
 

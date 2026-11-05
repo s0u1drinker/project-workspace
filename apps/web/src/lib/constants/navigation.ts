@@ -1,3 +1,4 @@
+import { ICON_MAP } from '$constants';
 import type { TNavigation, TPathName } from '$lib/types';
 
 export const PATH_NAME = {
@@ -9,17 +10,17 @@ export const NAVIGATION = {
   index: {
     path: '/',
     title: 'Главная',
-    icon: 'local:tasks'
+    icon: ICON_MAP.local('tasks')
   },
   projects: {
     path: '/projects',
     title: 'Проекты',
-    icon: 'local:projects'
+    icon: ICON_MAP.local('projects')
   },
   workspace: {
     path: '/workspace',
     title: 'Задачи',
-    icon: 'local:stats'
+    icon: ICON_MAP.local('stats')
   }
 } as const satisfies TNavigation;
 
@@ -30,11 +31,11 @@ export const USER_NAVIGATION = {
   profile: {
     path: '/user/profile',
     title: 'Профиль',
-    icon: 'local:user'
+    icon: ICON_MAP.local('user')
   },
   settings: {
     path: '/user/settings',
     title: 'Настройки',
-    icon: 'local:settings'
+    icon: ICON_MAP.local('settings')
   }
 } as const satisfies TNavigation;
