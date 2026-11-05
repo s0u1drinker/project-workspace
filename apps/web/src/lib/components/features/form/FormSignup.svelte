@@ -1,7 +1,7 @@
 <script lang="ts">
   import { resolve } from "$app/paths";
   import { Button, Form, FieldLogin, FieldPassword, ErrorText } from "$components";
-  import { PATH_NAME, APP_NAME, FORM_SIGNUP_HEADER_TEXT, FORM_SIGNUP_BUTTON_TEXT, FORM_LOGIN_BUTTON_GUEST_TEXT, HTTP_METHOD, APP_API } from "$lib/constants";
+  import { PATH_NAME, APP_NAME, FORM_SIGNUP_HEADER_TEXT, BUTTON_TEXT, HTTP_METHOD, APP_API } from "$lib/constants";
 
   let username = $state('');
   let password = $state('');
@@ -28,11 +28,11 @@
     {#snippet buttons()}
       <Button
         type="button"
-        text={FORM_SIGNUP_BUTTON_TEXT}
+        text={BUTTON_TEXT.signup}
       />
       <Button
         type="submit"
-        text={FORM_LOGIN_BUTTON_GUEST_TEXT}
+        text={BUTTON_TEXT.guestAccess}
         variant="outline"
         formAction={APP_API.authDemo}
       />
