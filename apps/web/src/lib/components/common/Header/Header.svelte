@@ -12,5 +12,18 @@
 </header>
 
 <style lang="postcss">
-  @import './Header.postcss';
+.header {
+  --header-padding: var(--indent);
+
+  display: flex;
+  align-items: center;
+  padding: var(--header-padding);
+
+  &__user-block {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: var(--header-padding);
+  }
+}
 </style>
