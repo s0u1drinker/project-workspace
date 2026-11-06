@@ -1,14 +1,11 @@
 <script lang="ts">
-  import { Logo, Navigation, UserInfo, Breadcrumbs } from '$components';
+  import { Logo, Breadcrumbs, HeaderNavigation } from '$components';
 </script>
 
 <header class="header">
   <Logo />
   <Breadcrumbs />
-  <div class="header__user-block">
-    <Navigation />
-    <UserInfo />
-  </div>
+  <HeaderNavigation />
 </header>
 
 <style lang="postcss">
@@ -19,11 +16,8 @@
   align-items: center;
   padding: var(--header-padding);
 
-  &__user-block {
+  :global(.header-nav) {
     margin-left: auto;
-    display: flex;
-    align-items: center;
-    gap: var(--header-padding);
   }
 }
 </style>
