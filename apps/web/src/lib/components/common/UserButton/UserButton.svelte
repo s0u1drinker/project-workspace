@@ -27,7 +27,7 @@
   width: 100%;
 
   @mixin hover {
-    --button-bgc: color-mix(in oklab, var(--color-gray) 25%, white);
+    --button-bgc: var(--color-primary-15-tr);
   }
 }
 </style>
