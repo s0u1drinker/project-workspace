@@ -18,6 +18,11 @@
 
   :global(.header-nav) {
     margin-left: auto;
+    display: none;
+
+    @media (--viewport-lg) {
+      display: flex;
+    }
   }
 }
 </style>
