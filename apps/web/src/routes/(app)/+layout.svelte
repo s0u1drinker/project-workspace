@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Header } from "$components";
+  import { Header, NavigationMobile } from "$components";
   let { children } = $props();
 </script>
 
@@ -9,6 +9,8 @@
   <main class="app-layout__content">
     {@render children()}
   </main>
+
+  <NavigationMobile />
 </div>
 
 <style lang="postcss">
