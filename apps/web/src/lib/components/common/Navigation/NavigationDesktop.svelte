@@ -2,15 +2,20 @@
   import { Navigation, UserInfo } from '$components';
 </script>
 
-<div class="header-nav">
+<div class="nav-desktop">
   <Navigation />
   <UserInfo />
 </div>
 
 <style lang="postcss">
-.header-nav {
-  display: flex;
+.nav-desktop {
   align-items: center;
   gap: var(--header-padding);
+  margin-left: auto;
+  display: none;
+
+  @media (--viewport-lg) {
+    display: flex;
+  }
 }
 </style>

@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { Logo, Breadcrumbs, HeaderNavigation } from '$components';
+  import { Logo, Breadcrumbs, NavigationDesktop } from '$components';
 </script>
 
 <header class="header">
   <Logo />
   <Breadcrumbs />
-  <HeaderNavigation />
+  <NavigationDesktop />
 </header>
 
 <style lang="postcss">
@@ -15,14 +15,5 @@
   display: flex;
   align-items: center;
   padding: var(--header-padding);
-
-  :global(.header-nav) {
-    margin-left: auto;
-    display: none;
-
-    @media (--viewport-lg) {
-      display: flex;
-    }
-  }
 }
 </style>
