@@ -1,6 +1,13 @@
-<script lang="ts"></script>
+<script lang="ts">
+  import { Navigation } from '$components';
+  import { USER_NAVIGATION } from '$constants';
 
-<div class="nav-mobile">Navigation Desktop</div>
+  const extraItems = $derived({ profile: USER_NAVIGATION.profile});
+</script>
+
+<div class="nav-mobile">
+  <Navigation { extraItems } />
+</div>
 
 <style lang="postcss">
 .nav-mobile {
