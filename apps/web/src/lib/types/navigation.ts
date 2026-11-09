@@ -1,6 +1,7 @@
+import type { Pathname } from '$app/types';
 import type { TIconName } from './icon';
 
-type TPath = `/${string}`;
+type TPath = Pathname;
 
 interface NavigationProps {
   path: TPath;
