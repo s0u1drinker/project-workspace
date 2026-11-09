@@ -9,8 +9,14 @@
     ARIA_CURRENT_PAGE,
     ARIA_LABEL
   } from '$constants';
+  import type { INavigation } from './Navigation.types';
 
-  const navList = $derived(Object.entries(NAVIGATION));
+  const { extraItems }: INavigation = $props();
+
+  const navList = $derived([
+    ...Object.entries(NAVIGATION),
+    ...Object.entries(extraItems ?? {})
+  ]);
 
   const isActive = (path: string) => page.url.pathname === path;
   const getAriaCurrent = (path: string) => (isActive(path) ? ARIA_CURRENT_PAGE : undefined);
