@@ -56,23 +56,29 @@
     --after-show-offset: calc(-1 * var(--after-height) * 2);
 
     display: flex;
-    align-items: center;
-    gap: var(--indent-half);
-    position: relative;
     padding-block: var(--indent-half);
-    color: var(--color-text);
+    flex-direction: column;
+    color: var(--color-gray);
+    align-items: center;
 
-    &::after {
-      content: "";
-      width: 100%;
-      display: block;
-      height: var(--after-height);
-      background-color: var(--color-primary);
-      position: absolute;
-      bottom: 0;
-      opacity: 0;
-      transform: translateY(var(--after-height));
-      transition: transform var(--transition-base), opacity var(--transition-base), color var(--transition-base);
+    @media (--viewport-lg) {
+      flex-direction: row;
+      gap: var(--indent-half);
+      position: relative;
+      color: var(--color-text);
+
+      &::after {
+        content: "";
+        width: 100%;
+        display: block;
+        height: var(--after-height);
+        background-color: var(--color-primary);
+        position: absolute;
+        bottom: 0;
+        opacity: 0;
+        transform: translateY(var(--after-height));
+        transition: transform var(--transition-base), opacity var(--transition-base), color var(--transition-base);
+      }
     }
 
     @mixin hover {
