@@ -10,7 +10,7 @@ export const NAVIGATION = {
   index: {
     path: '/',
     title: 'Главная',
-    icon: ICON_MAP.local('tasks')
+    icon: ICON_MAP.local('stats')
   },
   projects: {
     path: '/projects',
@@ -20,7 +20,7 @@ export const NAVIGATION = {
   workspace: {
     path: '/workspace',
     title: 'Задачи',
-    icon: ICON_MAP.local('stats')
+    icon: ICON_MAP.local('tasks')
   }
 } as const satisfies TNavigation;
 
