@@ -47,8 +47,18 @@
 .navigation {
 
   &__list {
+    --list-gap: var(--indent);
+
     display: flex;
-    gap: var(--indent);
+    gap: var(--list-gap);
+
+    @media (--viewport-sm) {
+      --list-gap: calc(3vw * 4);
+    }
+
+    @media (--viewport-lg) {
+      --list-gap: var(--indent);
+    }
   }
 
   &__link {

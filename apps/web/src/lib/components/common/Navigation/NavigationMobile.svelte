@@ -12,6 +12,8 @@
 <style lang="postcss">
 .nav-mobile {
   display: flex;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  justify-content: center;
 
   @media (--viewport-lg) {
     display: none;
