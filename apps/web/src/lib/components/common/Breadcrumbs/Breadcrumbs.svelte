@@ -28,5 +28,23 @@
 </nav>
 
 <style lang="postcss">
-  @import './Breadcrumbs.postcss';
+.breadcrumbs {
+  --gap: var(--indent-half);
+  --f-size: 1.25rem;
+
+  display: flex;
+  gap: var(--gap);
+  margin-left: var(--gap);
+  font-size: var(--f-size);
+
+  &__item {
+    display: flex;
+    gap: var(--gap);
+  }
+
+  &__delimiter {
+    color: var(--color-gray);
+    font-weight: bold;
+  }
+}
 </style>
