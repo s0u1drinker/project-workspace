@@ -53,7 +53,7 @@
     gap: var(--list-gap);
 
     @media (--viewport-sm) {
-      --list-gap: calc(3vw * 4);
+      --list-gap: calc(2vw * 4);
     }
 
     @media (--viewport-lg) {
