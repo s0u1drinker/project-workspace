@@ -29,17 +29,24 @@
 
 <style lang="postcss">
 .breadcrumbs {
-  --gap: var(--indent-half);
-  --f-size: 1.25rem;
+  --brd-gap: 0;
+  --brd-direction: column;
+  --brd-f-size: 1.25rem;
 
   display: flex;
-  gap: var(--gap);
-  margin-left: var(--gap);
-  font-size: var(--f-size);
+  flex-direction: var(--brd-direction);
+  gap: var(--brd-gap);
+  margin-left: var(--brd-gap);
+  font-size: var(--brd-f-size);
+
+  @media (--viewport-sm) {
+    --brd-direction: row;
+    --brd-gap: var(--indent-half);
+  }
 
   &__item {
     display: flex;
-    gap: var(--gap);
+    gap: var(--indent-half);
   }
 
   &__delimiter {
