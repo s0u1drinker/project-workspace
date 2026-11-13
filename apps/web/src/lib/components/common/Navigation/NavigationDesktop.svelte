@@ -9,13 +9,13 @@
 
 <style lang="postcss">
 .nav-desktop {
-  align-items: center;
-  gap: var(--header-padding);
-  margin-left: auto;
   display: none;
-
+  
   @media (--viewport-lg) {
     display: flex;
+    align-items: center;
+    gap: var(--header-padding);
+    margin-left: auto;
   }
 }
 </style>
