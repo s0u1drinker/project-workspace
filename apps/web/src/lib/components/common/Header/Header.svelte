@@ -10,14 +10,13 @@
 
 <style lang="postcss">
 .header {
-  --header-padding: var(--indent);
   --header-direction: column;
   --header-align: flex-start;
 
   display: flex;
   flex-direction: var(--header-direction);
   align-items: var(--header-align);
-  padding: var(--header-padding);
+  padding: var(--app-padding);
 
   @media (--viewport-sm) {
     --header-direction: row;

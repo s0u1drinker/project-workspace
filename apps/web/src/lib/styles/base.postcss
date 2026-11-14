@@ -18,12 +18,18 @@ body {
 }
 
 #app {
+  --app-padding: var(--indent-half);
+
   min-height: 100dvh;
   min-width: 300px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   position: relative;
+
+  @media (--viewport-sm) {
+    --app-padding: var(--indent);
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -14,7 +14,7 @@
   @media (--viewport-lg) {
     display: flex;
     align-items: center;
-    gap: var(--header-padding);
+    gap: var(--app-padding);
     margin-left: auto;
   }
 }

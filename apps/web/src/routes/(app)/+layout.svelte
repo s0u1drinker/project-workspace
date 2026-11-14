@@ -20,6 +20,7 @@
     flex-direction: column;
 
     &__content {
+      padding: var(--app-padding);
       flex: 1;
     }
   }
