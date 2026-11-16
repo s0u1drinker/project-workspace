@@ -1,20 +1,22 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { GREETINGS, MESSAGES } from './constants';
+  import { getRandomItemFromArray } from '$lib/utils';
 
-  let greeting = $state('');
-  let message = $state('');
-
-  const getRandomItemFrom = <T>(arr: readonly T[]): T =>
-    arr[Math.floor(Math.random() * arr.length)];
+  let greeting: string | undefined = $state(undefined);
+  let message: string | undefined = $state(undefined);
 
   onMount(() => {
-    greeting = getRandomItemFrom(GREETINGS);
-    message = getRandomItemFrom(MESSAGES);
+    greeting = getRandomItemFromArray(GREETINGS);
+    message = getRandomItemFromArray(MESSAGES);
   });
 </script>
 
-<h1>{ greeting }</h1>
-<p>{ message }</p>
+{#if greeting}
+  <h1>{ greeting }</h1>
+{/if}
+{#if message}
+  <p>{ message }</p>
+{/if}
 
 <style lang="postcss"></style>
