@@ -1,15 +1,8 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  import { GREETINGS, MESSAGES } from './constants';
-  import { getRandomItemFromArray } from '$lib/utils';
+  import { page } from '$app/state';
 
-  let greeting: string | undefined = $state(undefined);
-  let message: string | undefined = $state(undefined);
-
-  onMount(() => {
-    greeting = getRandomItemFromArray(GREETINGS);
-    message = getRandomItemFromArray(MESSAGES);
-  });
+  const greeting = $derived(page.data.greeting);
+  const message = $derived(page.data.message);
 </script>
 
 {#if greeting}
