@@ -1,8 +1,13 @@
 <script lang="ts">
   import { DashboardGreeting as Greeting } from "$components";
+  import { DashboardGrid as Grid } from "$components";
 </script>
 
-<Greeting />
-<div>Dashboard</div>
+<div class="dashboard">
+  <Greeting />
+  <Grid />
+</div>
 
-<style lang="postcss"></style>
+<style lang="postcss">
+.dashboard {}
+</style>
