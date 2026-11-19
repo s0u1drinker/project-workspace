@@ -3,10 +3,22 @@
 </script>
 
 <div class="d-grid">
-  <Block />
-  <Block />
-  <Block />
-  <Block />
+  <Block>
+    {#snippet header()}
+      6
+    {/snippet}
+    {#snippet body()}
+      Задач  в работе
+    {/snippet}
+  </Block>
+  <Block>
+    {#snippet header()}
+      3
+    {/snippet}
+    {#snippet body()}
+      Проекта
+    {/snippet}
+  </Block>
 </div>
 
 <style lang="postcss">
