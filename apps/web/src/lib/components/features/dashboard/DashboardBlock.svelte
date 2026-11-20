@@ -20,7 +20,9 @@
 <style lang="postcss">
 .d-block {
   border: var(--border-thick) var(--color-black);
-  padding: var(--indent);
+  padding: var(--app-padding);
   border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background-color: var(--color-white);
 }
 </style>

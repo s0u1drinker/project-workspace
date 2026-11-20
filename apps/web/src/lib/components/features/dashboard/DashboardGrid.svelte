@@ -22,5 +22,10 @@
 </div>
 
 <style lang="postcss">
-.d-grid {}
+.d-grid {
+  display: flex;
+  gap: var(--app-padding);
+  flex-wrap: wrap;
+  margin-top: calc(var(--app-padding) * 2);
+}
 </style>

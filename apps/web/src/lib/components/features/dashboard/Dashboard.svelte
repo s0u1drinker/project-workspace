@@ -9,5 +9,8 @@
 </div>
 
 <style lang="postcss">
-.dashboard {}
+.dashboard {
+  display: flex;
+  flex-direction: column;
+}
 </style>
