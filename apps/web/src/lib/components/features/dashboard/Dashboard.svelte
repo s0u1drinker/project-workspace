@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { DashboardGreeting as Greeting } from "$components";
-  import { DashboardGrid as Grid } from "$components";
+  import DashboardGreeting from "./DashboardGreeting.svelte";
+  import DashboardGrid from "./DashboardGrid.svelte";
 </script>
 
 <div class="dashboard">
-  <Greeting />
-  <Grid />
+  <DashboardGreeting />
+  <DashboardGrid />
 </div>
 
 <style lang="postcss">

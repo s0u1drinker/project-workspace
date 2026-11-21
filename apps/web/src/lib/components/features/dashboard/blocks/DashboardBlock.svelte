@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { IDashboardBlock } from './types';
+  import type { IDashboardBlock } from '../types';
 
   const { header, body }: IDashboardBlock = $props();
 </script>
