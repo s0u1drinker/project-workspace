@@ -21,6 +21,8 @@
   @media (--viewport-sm) {
     --header-direction: row;
     --header-align: center;
+
+     @mixin glass;
   }
 }
 </style>
