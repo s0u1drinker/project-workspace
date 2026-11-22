@@ -1,7 +1,7 @@
 import type { Pathname } from '$app/types';
 import type { TIconName } from './icon';
 
-type TPath = Pathname;
+export type TPath = Pathname;
 
 interface NavigationProps {
   path: TPath;
