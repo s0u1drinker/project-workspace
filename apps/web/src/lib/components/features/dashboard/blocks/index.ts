@@ -1,3 +1,4 @@
-export { default as DashboardBlock } from './DashboardBlock.svelte';
+export { default as DashboardBlockStat } from './DashboardBlockStat.svelte';
+export { default as DashboardBlockNearestTasks } from './DashboardBlockNearestTasks.svelte';
+export { default as DashboardBlockLastChanges } from './DashboardBlockLastChanges.svelte';
 export { default as DashboardBlockProjects } from './DashboardBlockProjects.svelte';
-export { default as DashboardBlockTasks } from './DashboardBlockTasks.svelte';

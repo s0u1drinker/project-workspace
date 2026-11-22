@@ -1,10 +1,11 @@
 <script lang="ts">
-  import type { IDashboardBlock } from '../types';
+  import type { IDashboardBlockWrapper } from '../types';
 
-  const { header, body }: IDashboardBlock = $props();
+  const { header, body, className = '' }: IDashboardBlockWrapper = $props();
+  const classList = $derived([ 'd-block', className ]);
 </script>
 
-<div class="d-block">
+<div class={classList}>
   {#if header}
     <div class="d-block__header">
       {@render header()}

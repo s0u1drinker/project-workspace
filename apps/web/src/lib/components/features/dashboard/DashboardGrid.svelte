@@ -1,17 +1,28 @@
 <script lang="ts">
-  import { DashboardBlockProjects, DashboardBlockTasks } from "./blocks";
+  import {
+    DashboardBlockStat,
+    DashboardBlockNearestTasks,
+    DashboardBlockLastChanges,
+    DashboardBlockProjects
+  } from "./blocks";
 </script>
 
 <div class="d-grid">
-  <DashboardBlockTasks />
+  <DashboardBlockStat />
+  <DashboardBlockNearestTasks />
+  <DashboardBlockLastChanges />
   <DashboardBlockProjects />
 </div>
 
 <style lang="postcss">
 .d-grid {
-  display: flex;
+  display: grid;
   gap: var(--app-padding);
-  flex-wrap: wrap;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-areas:
+    "stat stat stat"
+    "tasks events projects";
+  align-items: stretch;
   margin-top: calc(var(--app-padding) * 2);
 }
 </style>
