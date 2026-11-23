@@ -1,18 +1,13 @@
 <script lang="ts">
   import DashboardBlockList from "./DashboardBlockList.svelte";
-
-  const tasks = [
-    { id: 1, type: 'bug', project: 'Проект Альфа', title: 'Исправить баг с вёрсткой', end: 'Сегодня' },
-    { id: 2, type: 'feature', project: 'Проект Бета', title: 'Добавить фильтр в таблицу', end: 'Сегодня' },
-    { id: 3, type: 'design', project: 'Проект Альфа', title: 'Придумать дизайн страницы', end: 'Завтра' }
-  ];
+  import { tasks } from '$stores';
 </script>
 
 {#snippet taskItem(task: typeof tasks[number])}
   <div class="task-list">
     <div>{task.type}</div>
-    <div>{task.title} ({task.project})</div>
-    <div>{task.end}</div>
+    <div>{task.subject} ({task.idProject})</div>
+    <div>{task.deadline}</div>
   </div>
 {/snippet}
 
