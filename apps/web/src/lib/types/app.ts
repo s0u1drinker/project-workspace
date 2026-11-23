@@ -18,3 +18,8 @@ export type TAccessibilityProps = AriaAttributes & DataAttributes;
 export type TValuesEqualsKeys<K extends PropertyKey> = {
   [P in K]: P;
 };
+
+/** Тип для определения заглавной первой буквы. */
+export type TCapitalizeFirstChar<S extends string> = S extends `${infer First}${string}`
+  ? Uppercase<First>
+  : S;
