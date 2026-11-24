@@ -1,18 +1,13 @@
 <script lang="ts">
   import DashboardBlockList from "./DashboardBlockList.svelte";
-
-  const projectsProgress = [
-    { id: 1, name: 'Проект Альфа', progress: 78 },
-    { id: 2, name: 'Проект Бета', progress: 56 },
-    { id: 3, name: 'Проект Гамма', progress: 34 }
-  ];
+  import { projects } from '$stores';
 </script>
 
-{#snippet projectItem(project: typeof projectsProgress[number])}
+{#snippet projectItem(project: typeof projects[number])}
   <div class="project-progress">
     <strong>{project.name}</strong>
-    <progress value={project.progress} max="100"></progress>
-    <span>{project.progress}%</span>
+    <progress value={project.description.length + project.name.length} max="100"></progress>
+    <span>{project.description.length + project.name.length}%</span>
   </div>
 {/snippet}
 
@@ -22,7 +17,7 @@
     icon='local:projects'
     link='/'
     linkText='Все проекты'
-    items={projectsProgress}
+    items={projects}
     listItem={projectItem}
   />
 </div>
