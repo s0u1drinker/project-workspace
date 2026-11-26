@@ -44,3 +44,25 @@ export const tasks = $state<ITask[]>([
     changes: []
   }
 ]);
+
+/** Все задачи. */
+export const tasksAll = $derived(tasks.length);
+
+/** Количество срочных задач. */
+export const tasksUrgent = $derived(tasks.filter((task) => task.urgent).length);
+
+/**
+ * Количество задач с определённым статусом.
+ * @param status Статус.
+ * @returns Количество задач.
+ */
+export const getTasksCountByStatus = (status: ITask['status']) =>
+  tasks.filter((task) => task.status === status).length;
+
+/**
+ * Количество задач с определённым типом.
+ * @param type Тип задачи.
+ * @returns Количество задач.
+ */
+export const getTasksCountByType = (type: ITask['type']) =>
+  tasks.filter((task) => task.type === type).length;
