@@ -45,8 +45,8 @@ export const tasks = $state<ITask[]>([
   }
 ]);
 
-/** Все задачи. */
-export const tasksAll = $derived(tasks.length);
+/** Количество задач. */
+export const tasksCount = $derived(tasks.length);
 
 /** Количество срочных задач. */
 export const tasksUrgent = $derived(tasks.filter((task) => task.urgent).length);

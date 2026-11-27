@@ -1,2 +1,2 @@
-export { tasks } from './index.svelte';
+export * from './index.svelte';
 export type { ITask } from './types';
