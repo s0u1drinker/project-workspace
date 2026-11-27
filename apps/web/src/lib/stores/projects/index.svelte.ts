@@ -20,3 +20,6 @@ export const projects = $state<IProject[]>([
     name: 'ReactCookBook'
   }
 ]);
+
+/** Количество проектов. */
+export const projectsCount = $derived(projects.length);
